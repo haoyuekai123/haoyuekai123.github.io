@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全局设置选项</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+    	<link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	    <script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/globalSetting.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>全局设置</h2>
+		</header>
+		<section>
+			<div id="main" class="easyui-tabs">
+			    <div title="数据清洗设置" style="display:none;" class="tab1">
+					<p class="introduce">制定系统级的数据清洗方法。任何信息源都可利用这些全局设置，从而避免重复设置。此处的更改会自动生效，引用全局设置的信息源会自动使用新的设置来进行数据清洗。信息源本身指定的专有数据清洗设置不受此影响。</p>
+					<ul class="list_title">
+						<li>
+							<span class="type">数据清洗类型</span
+							><span class="name">名称</span
+							><span class="detail">详细设置</span
+							><span class="edit">操作</span>
+						</li>
+					</ul>
+					<ul class="list_cont">
+						<!--list start-->
+						<li>
+							<span class="type">type</span>
+							<span class="name">name</span>
+							<span class="detail">detail</span>
+							<span class="edit">edit</span>
+						</li>
+						<!--list end-->
+					</ul>
+					<!--分页-->
+					<div id="pp"></div>
+			    </div>
+			    <div title="代理服务器设置" style="display:none;" class="tab2">
+					<p class="introduce">可在此集中维护多个代理服务前期列表。设置信息源时，可以随时选用其中任一列表。每个列表可包含多个代理服务器。</p>
+					<p class="introduce">代理服务器格式举例：192.168.0.100:8080</p>
+					<ul class="list_title">
+						<li>
+							<span class="name2">列表名称</span
+							><span class="list">代理服务器列表</span
+							><span class="edit2">操作</span>
+						</li>
+					</ul>
+					<ul class="list_cont">
+						<!--list start-->
+						<li>
+							<span class="name2">name</span>
+							<span class="list">list</span>
+							<span class="edit2">edit</span>
+						</li>
+						<!--list end-->
+					</ul>
+					<!--分页-->
+					<div id="pp2"></div>
+			    </div>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/globalSetting.js"></script>
+	</body>
+</html>

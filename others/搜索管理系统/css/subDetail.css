@@ -1,0 +1,219 @@
+@charset "utf-8";
+body{
+	width: 100%;
+	background: #fff;
+}
+header{
+	padding: 10px 0;
+}
+header h2{
+	font-size: 18px;
+	line-height: 60px;
+	font-weight: 700;
+	padding-left: 70px;
+	background-image: url("http://usr.im/40x40?text=设置");
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 20px center;
+	background-color: #f5f9ff;
+	margin-bottom: 5px;
+}
+header div{
+	font-size: 14px;
+	line-height: 30px;
+}
+header div span{
+	display: inline-block;
+	height: 30px;
+	width: 120px;
+	padding-left: 24px;
+	margin-left: 20px;
+	background: url(../images/nav_bg.png) no-repeat 0 center;
+	font-size: 14px;
+}
+header div i{
+	display: inline-block;
+	color: #E0A21C;
+	padding: 5px 10px;
+	border: 2px solid #C3D5F5;
+	border-radius: 16px 0 16px 0;
+	line-height: 16px;
+	font-size: 14px;
+}
+section{
+	font-size: 14px;
+}
+section .my_tab{
+	padding: 10px 20px 20px;
+}
+.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.introduce{
+	font-size: 12px;
+	line-height: 24px;
+}
+.main{
+	border-bottom: 2px solid #50575C;
+	margin-top: 20px;
+}
+.main li{
+	border-top: 1px solid #585E64;
+}
+.main li .left{
+	width: 70%;
+	float: left;
+}
+.main li h3{
+	color: #070F4A;
+	font-size: 16px;
+	font-weight: 600;
+}
+.main li .right{
+	width: 30%;
+	float: right;
+	background: #D5E8FA;
+	border-left: 7px solid #F7F7F7;
+	border-right: 7px solid #E0E6EC;
+	padding: 10px;
+}
+.right_introduce{
+	font-size: 12px;
+	line-height: 20px;
+	color: #000;
+}
+.main li .right input{
+	width: 200px;
+	font-size: 12px;
+	line-height: 20px;
+}
+.main li .right .check_item input{
+	width: 20px;
+	min-width: 20px;
+}
+.main li .right .check_item{
+	line-height: 20px;
+}
+.right_describe{
+	width: 200px;
+	height: 60px;
+	resize: none;
+	overflow-y: scroll;
+}
+.btn_box1{
+	line-height: 44px;
+	padding-right: 20px;
+	text-align: right;
+}
+.btn_box1 button{
+	width: 80px;
+	line-height: 24px;
+	margin-right: 10px;
+}
+.selectbox{
+	width:600px;
+	margin-left: 30px;
+}
+.selectbox div{
+	float:left;
+}
+.selectbox .select-bar{
+	padding:0 20px;
+}
+.selectbox .select-bar select{
+	width:200px;
+	height:300px;
+	border:1px #A0A0A4 solid;
+	padding:4px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+}
+.selectbox .select-bar select option{
+	line-height: 24px;
+	font-size: 14px;
+}
+.btn-bar{
+	padding-top: 50px;
+}
+.btn-bar p{
+	margin-top:16px;
+}
+.btn-bar p .btn{
+	width:50px;
+	height:30px;
+	cursor:pointer;
+	font-family:simsun;
+	font-size:14px;
+}
+.btn_box2{
+	width: 100%;
+	line-height: 44px;
+	padding-left: 200px;
+	padding-top: 20px;
+}
+.btn_box2 button{
+	width: 80px;
+	font-size: 14px;
+	line-height: 24px;
+	margin-right: 30px;
+}
+.extract_item{
+	padding: 10px;
+	border-bottom: 1px dashed #999;
+	margin-top: 10px;
+	position: relative;
+}
+.extract_item_select{
+	width: 100%;
+	font-size: 14px;
+	padding: 5px 0;
+}
+.extract_item_select label{
+	display: inline-block;
+	margin-right: 20px;
+}
+.extract_item_select label input{
+	width: 130px;
+	height: 24px;
+}
+.extract_item_select label .extract_item_type{
+	width: 90px;
+}
+.extract_item_select label .extract_item_num{
+	width: 50px;
+}
+.extract_item_count{
+	width: 550px;
+	height: 100px;
+	resize: none;
+	border-top: 1px solid #999;
+	border-top: 1px solid #999;
+	border-right: 3px double #999;
+	border-bottom: 3px double #999;
+	box-shadow: -2px -2px 1px #999;
+}
+.extract_item_remove{
+	display: block;
+	font-size: 14px;
+	position: absolute;
+	left: 600px;
+	top: 30px;
+}
+.hide{
+	display: none;
+}
+.extract_add{
+	margin: 10px 0 10px 220px;
+}
+.btn_box3{
+	width: 100%;
+	line-height: 44px;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.btn_box3 button{
+	width: 80px;
+	font-size: 14px;
+	line-height: 24px;
+	margin-right: 30px;
+}
+
+

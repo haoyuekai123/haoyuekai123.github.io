@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>类别信息</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/sortInfo.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>类别信息</h2>
+			<p style="line-height: 20px;">可在此指定当前分类标准包含的所有类别，使用该分类标准进行分类时，记录就可以被划分到其中一个最相关的类别下。例如，当定义省市作为一个分类标准时，可包含全国各个省、市、自治区、直辖市等几十个类别。</p>
+		</header>
+		<section>
+			<p class="nowSort">当前分类标准： <span class="c_EDC11C"></span></p>
+			<div class="title">
+				<div class="tit_left">
+					<a id="add_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-add'">添加</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="remove_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">删除</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="back_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-back'">返回</a>
+				</div>
+				<div class="tit_right">
+					<label>类别名或特征词： <input type="text" id="search_name" /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<ul class="list_title">
+				<li>
+					<span class="sort_checkbox">
+						<input type="checkbox" class="all_selection" />
+					</span
+					><span class="sort_name">类别名</span
+					><span class="sort_word">特征词</span
+					><span class="sort_discribe">描述</span
+					><span class="sort_edit">操作</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--list start-->
+				<li>
+					<span class="sort_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="sort_name">台湾</span>
+					<span class="sort_word">台北、新北、桃园、台中、台南、高雄、基隆、新竹、嘉义</span>
+					<span class="sort_discribe">台湾</span>
+					<span class="sort_edit">
+						<i class="edit_btn"></i>
+					</span>
+				</li>
+				<!--list end-->
+			</ul>
+			<!--分页-->
+			<div id="pp"></div>
+			<!--添加、修改类别窗口-->
+			<div id="win" style="display: none;">
+				<ul>
+					<li>
+						<div class="win_left">
+							<h2>类别和描述</h2>
+							<p>指定别的名称，若必要，也可指定描述信息。</p>
+						</div>
+						<div class="win_right">
+							<span>类别名：</span>
+							<input type="text" id="newName" />
+							<span>描述：</span>
+							<input type="text" id="newDiscribe" />
+						</div>
+					</li>	
+					<li>
+						<div class="win_left">
+							<h2>特征词</h2>
+							<p>可指定该类别文章中经常出现的若干特征值。在信息搜索时，系统会将这些词作为重要的分类依据之一，来确定搜集到的记录是否应该分到该类别下。多个特征词之间用逗号或空格隔开。</p>
+						</div>
+						<div class="win_right">
+							<span>特征词：</span>
+							<textarea id="newWord"></textarea>
+						</div>
+					</li>
+				</ul>
+				<div class="win_btns">
+					<a id="ensure" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
+					<a id="cancel" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>
+				</div>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/sortInfo.js"></script>
+	</body>
+</html>

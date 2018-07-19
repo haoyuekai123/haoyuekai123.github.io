@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>考生管理</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css">
+	    <link rel="stylesheet" type="text/css" href="../js/themes/icon.css">
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<link type="text/css" rel="stylesheet" href="../jedate/skin/jedate.css">
+	    <!--my css-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/examinee.css"/>
+		
+	</head>
+	<body>
+		<h2>会员管理</h2>
+		<div class="tool_box">
+			<label>姓名 <input type="text" class="search_name" /></label>
+			<label>准考证号 <input type="text" class="search_exam_card" /></label>
+			<label>试卷类型 
+				<select name="paper_type" id="paper_type" value="全部" class="easyui-combobox" style="width:120px;height: 26px;"
+					data-options="panelHeight:'auto',
+								  onChange:function(newValue, oldValue){
+								  	$('#paper_type').val(newValue);
+								  }">
+					<option value="全部">全部</option>
+					<option value="数学">数学</option>
+					<option value="英语">英语</option>
+					<option value="语文">语文</option>
+				</select>
+			</label><br />
+			<div style="display:block;margin-top: 25px;margin-left: 50px;">考试期间 
+				<input type="text" class="search_exam_card" id="start_time" type="text" value=""  readonly /> -
+				<input type="text" class="search_exam_card" id="end_time" type="text" value=""  readonly />
+			</div>
+			<button class="search_btn">搜索</button>
+		</div>
+		<ul class="user_list_title">
+			<li class="list_title">
+				<span class="list_num">编号</span>
+				<span class="list_name">姓名</span>
+				<span class="list_exam_card">准考证号</span>
+				<span class="list_gender">性别</span>
+				<span class="list_paper_type">试卷类型</span>
+				<span class="list_paper_name">试卷名称</span>
+				<span class="list_exam_time">考试时间</span>
+				<span class="list_exam_score">考试成绩</span>
+				<span class="list_exam_state">考试状态</span>
+				<span class="list_enter_time">录入时间</span>
+				<span class="list_edit">操作</span>
+			</li>
+		</ul>
+		<ul class="user_list">
+			<li class="list_cont">
+				<span class="list_num">1101</span>
+				<span class="list_name">李建勇</span>
+				<span class="list_exam_card">15312345678</span>
+				<span class="list_gender">男</span>
+				<span class="list_paper_type">英语</span>
+				<span class="list_paper_name">火星英语2016-2017上半学年</span>
+				<span class="list_exam_time">2016年6月6日</span>
+				<span class="list_exam_score">99</span>
+				<span class="list_exam_state">已评阅</span>
+				<span class="list_enter_time">2016年6月6日</span>
+				<span class="list_edit">
+					<button class="detail_btn">详情</button>
+				</span>
+			</li>
+			<li class="list_cont">
+				<span class="list_num">1102</span>
+				<span class="list_name">李建勇</span>
+				<span class="list_exam_card">15312345678</span>
+				<span class="list_gender">男</span>
+				<span class="list_paper_type">英语</span>
+				<span class="list_paper_name">火星英语2016-2017上半学年</span>
+				<span class="list_exam_time">2016年6月6日</span>
+				<span class="list_exam_score">99</span>
+				<span class="list_exam_state">已评阅</span>
+				<span class="list_enter_time">2016年6月6日</span>
+				<span class="list_edit">
+					<button class="detail_btn">详情</button>
+				</span>
+			</li>
+			<li class="list_cont">
+				<span class="list_num">1103</span>
+				<span class="list_name">李建勇</span>
+				<span class="list_exam_card">15312345678</span>
+				<span class="list_gender">男</span>
+				<span class="list_paper_type">英语</span>
+				<span class="list_paper_name">火星英语2016-2017上半学年</span>
+				<span class="list_exam_time">2016年6月6日</span>
+				<span class="list_exam_score">99</span>
+				<span class="list_exam_state">已评阅</span>
+				<span class="list_enter_time">2016年6月6日</span>
+				<span class="list_edit">
+					<button class="detail_btn">详情</button>
+				</span>
+			</li>
+			<li class="list_cont">
+				<span class="list_num">1104</span>
+				<span class="list_name">李建勇</span>
+				<span class="list_exam_card">15312345678</span>
+				<span class="list_gender">男</span>
+				<span class="list_paper_type">英语</span>
+				<span class="list_paper_name">火星英语2016-2017上半学年</span>
+				<span class="list_exam_time">2016年6月6日</span>
+				<span class="list_exam_score">99</span>
+				<span class="list_exam_state">已评阅</span>
+				<span class="list_enter_time">2016年6月6日</span>
+				<span class="list_edit">
+					<button class="detail_btn">详情</button>
+				</span>
+			</li>
+		</ul>
+		<!--添加/编辑弹窗-->
+		<!--考生信息和答题卡信息选项卡形式展示-->
+		<div id="dialog_box" style="display: none;">
+	        <div id="tabs" style="width:100%;height:100%">
+				<div class="tab" title="基本信息" style="padding:10px">
+					<div class="clear"></div>
+					<ul class="left">
+						<li>
+							<span>姓名</span><i>李建勇</i>
+						</li>
+						<li>
+							<span>准考证号</span><i>13112345678</i>
+						</li>
+						<li>
+							<span>性别</span><i>男</i>
+						</li>
+						<li>
+							<span>生日</span><i>1986-11-25</i>
+						</li>
+						<li>
+							<span>身份证号</span><i>130428198611253210</i>
+						</li>
+					</ul>
+					<div class="right">
+						<div>
+							<p>身份证正面</p>
+							<img src="http://placehold.it/269x184" alt="" />
+						</div>
+						<div>
+							<p>身份证背面</p>
+							<img src="http://placehold.it/269x184" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="tab" title="答题卡信息" style="padding:10px">
+					<div class="clear"></div>
+					<ul class="left">
+						<li>
+							<span>考试日期</span><i>2016-6-6</i>
+						</li>
+						<li>
+							<span>考试试题</span><i>火星英语2016-2017上半学年</i>
+						</li>
+						<li>
+							<span>考试状态</span>
+							<select name="detail_test_state" class="detail_test_state">
+								<option value="naomal">正常</option>
+								<option value="absence">旷考</option>
+								<option value="chect">作弊</option>
+								<option value="others">其他</option>
+							</select>
+						</li>
+						<li>
+							<span>评卷教师</span><i>张老师</i>
+						</li>
+						<li>
+							<span>考试分数</span><i class="detail_score">99</i>&nbsp;&nbsp;<button id="change_score">修改</button>
+						</li>
+						<li class="change_man" style="display: none;">
+							<span>修改人</span><i>李老师</i>
+						</li>
+						<li style="position: relative;">
+							<span>备注</span><textarea class="test_note" style="position: absolute;left: 26%; top: 15px;width: 74%;max-width: 74%;"></textarea>
+						</li>
+					</ul>
+					<div class="right">
+						<div>
+							<p>准考证</p>
+							<img src="http://placehold.it/269x184" alt="" />
+						</div>
+						<div>
+							<p>考试试题</p>
+							<img src="http://placehold.it/269x184" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <!--弹出修改分数窗口-->
+	    <div id="dialog_box2" style="display: no-ne;">
+	    	<ul>
+	    		<li><span>分数</span><input type="text" class="change_score_input" /></li>
+	    		<li><span>修改人</span><input type="text" class="change_man_input" /></li>
+	    		<li><span>管理员密码</span><input type="text" class="administator_pwd" /></li>
+	    	</ul>
+	    	<button id="change_btn_click">修改</button>
+	    </div>
+		<!--分页-->
+		<div id="pp"></div>
+    	
+    	<!--my js-->
+    	<script src="../js/examinee.js"></script>
+    	
+	</body>
+</html>

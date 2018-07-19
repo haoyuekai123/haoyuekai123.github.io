@@ -1,0 +1,109 @@
+@charset "utf-8";
+body{
+	background: #fff;
+	width: 100%;
+	min-width: 1200px;
+}
+header{
+	width: 100%;
+	padding-left: 60px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/40x40?text=设置");
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+section .title{
+	width: 100%;
+	height: 35px;
+	padding: 5px 20px;
+	font-size: 14px;
+	background: linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -o-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -ms-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -moz-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -webkit-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+}
+.title .tit_left{
+	float: left;
+}
+.title .tit_right{
+	float: right;
+}
+.title .tit_right label{
+	margin-right: 5px;
+}
+.title .tit_right input{
+	width: 80px;
+	font-size: 12px;
+	line-height: 24px;
+	height: 24px;
+	border-radius: 3px;
+}
+
+section ul li{
+	width: 100%;
+	line-height: 36px;
+	margin-top: 2px;
+}
+.list_title li{
+	background: rgb(233, 241, 251);
+	color: #0081C2;
+}
+section ul li span{
+	display: inline-block;
+}
+section ul li span a{
+	color: #092DB1;
+}
+
+.edit_checkbox{
+	width: 2%;
+	text-align: center;
+}
+.edit_type{
+	width: 6%;
+}
+.fun_module{
+	width: 11%;
+}
+.edit_user{
+	width: 5%;
+}
+.ip_address{
+	width: 8%;
+}
+.url{
+	width: 18%;
+	padding: 0 5px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	line-height: 12px;
+}
+.quote_page{
+	width: 16%;
+	padding: 0 5px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	line-height: 12px;
+}
+.edit{
+	width: 10%;
+}
+.edit_obj{
+	width: 10%;
+}
+.obj_count{
+	width: 4%;
+	text-align: center;
+}
+.edit_time{
+	width: 10%;
+}

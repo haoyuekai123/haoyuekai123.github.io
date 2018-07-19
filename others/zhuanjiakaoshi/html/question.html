@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+	<head>
+		<meta charset="utf-8">
+		<title>题库</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css">
+	    <link rel="stylesheet" type="text/css" href="../js/themes/icon.css">
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	    <!--my css-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/question.css"/>
+		
+	</head>
+	<body style="height: 100%;">
+		<div style="padding: 0 45px;">
+			<h2>试题管理</h2>
+			<div class="tool_box">
+				<label>名称 <input type="text" class="search_name" /></label>
+				<label>类型 
+					<select name="test_type" id="search_type" value="全部" class="easyui-combobox" style="width:120px;height: 26px;"
+						data-options="panelHeight:'auto',
+									  onChange:function(newValue, oldValue){
+									  	$('#search_type').val(newValue);
+									  }">
+						<option value="全部">全部</option>
+						<option value="语文">语文</option>
+						<option value="英语">英语</option>
+						<option value="数学">数学</option>
+					</select>
+				</label>
+				<label>录入教师 
+					<select name="test_teacher" id="search_teacher" value="全部" class="easyui-combobox" style="width:120px;height: 26px;"
+						data-options="panelHeight:'auto',
+									  onChange:function(newValue, oldValue){
+									  	$('#search_teacher').val(newValue);
+									  }">
+						<option value="全部">全部</option>
+						<option value="王老师">王老师</option>
+						<option value="张老师">张老师</option>
+						<option value="李老师">李老师</option>
+					</select>
+				</label>
+				<button class="add_btn">录入</button>
+				<button class="search_btn">搜索</button>
+			</div>
+			<ul class="user_list_title">
+				<li class="list_title">
+					<span class="list_num">试题编号</span>
+					<span class="list_name">试卷名称</span>
+					<span class="list_type">试卷类型</span>
+					<span class="list_teacher">录入教师</span>
+					<span class="list_state">考试状态</span>
+					<span class="list_total_score">总分数</span>
+					<span class="list_time">录入日期</span>
+					<span class="list_edit">操作</span>
+				</li>
+			</ul>
+			<ul class="user_list">
+				<li class="list_cont">
+					<span class="list_num">123456</span>
+					<span class="list_name">2016 高考英语</span>
+					<span class="list_type">英语</span>
+					<span class="list_teacher">王老师</span>
+					<span class="list_state">开卷</span>
+					<span class="list_total_score">100</span>
+					<span class="list_time">2016-4-10 19:46:28</span>
+					<span class="list_edit">
+						<button class="detail_btn">详情</button> <button class="remove_btn">删除</button>
+					</span>
+				</li>
+				<li class="list_cont">
+					<span class="list_num">123456</span>
+					<span class="list_name">2016 高考英语</span>
+					<span class="list_type">英语</span>
+					<span class="list_teacher">王老师</span>
+					<span class="list_state">开卷</span>
+					<span class="list_total_score">100</span>
+					<span class="list_time">2016-4-10 19:46:28</span>
+					<span class="list_edit">
+						<button class="detail_btn">详情</button> <button class="remove_btn">删除</button>
+					</span>
+				</li>
+				<li class="list_cont">
+					<span class="list_num">123456</span>
+					<span class="list_name">2016 高考英语</span>
+					<span class="list_type">英语</span>
+					<span class="list_teacher">王老师</span>
+					<span class="list_state">开卷</span>
+					<span class="list_total_score">100</span>
+					<span class="list_time">2016-4-10 19:46:28</span>
+					<span class="list_edit">
+						<button class="detail_btn">详情</button> <button class="remove_btn">删除</button>
+					</span>
+				</li>
+			</ul>
+			<!--分页-->
+			<div id="pp"></div>
+		</div>	
+		
+		<!--录入试题窗口-->
+		<div id="enter_window" style="display: none;" class="easyui-accordion">
+			<div class="enter_paper_info" title="试卷信息" data-options="iconCls:'icon-save'">
+				<ul class="paper_info_list">
+					<li>
+						<span class="paper_info_list_title">试卷类型</span>
+						<input id="paper_info_type" class="easyui-combobox" value="英语" style="width:120px;height: 26px;" />
+							
+						<button id="add_paper_type">添加类型</button>
+						<div id="paper_type_dialog" style="font-size: 16px;display: none;">
+							<label style="display: block;line-height: 60px;text-align: center;">名称：<input type="text" class="dialog_name" /></label>
+							<button class="dialog_ensure" style="display: block;margin: 10px auto;">添加</button>
+						</div>
+					</li>
+					<li><span class="paper_info_list_title">试卷名称</span><input type="text" class="paper_info_name" /></li>
+					<li>
+						<span class="paper_info_list_title">试卷难度</span>
+						<select name="paper_info_level" id="paper_info_level" class="easyui-combobox" style="width:120px;height: 26px;"
+							data-options="panelHeight:'auto',
+										  onChange:function(newValue, oldValue){
+										  	$('#paper_info_level').val(newValue);
+										  }">
+							<option value="easy">简单</option>
+							<option value="normal">中等</option>
+							<option value="hard">困难</option>
+						</select>
+						<span class="paper_info_list_title">考试类型</span>
+						<select name="paper_info_testtype" id="paper_info_testtype" class="easyui-combobox" style="width:120px;height: 26px;"
+							data-options="panelHeight:'auto',
+										  onChange:function(newValue, oldValue){
+										  	$('#paper_info_testtype').val(newValue);
+										  }">
+							<option value="open">开卷</option>
+							<option value="close">闭卷</option>
+						</select>
+					</li>
+					<li><span class="paper_info_list_title">考试分数</span><input type="text" class="paper_info_score" /></li>
+					<li>
+						<span class="paper_info_list_title">备注</span><textarea class="paper_info_note"></textarea>
+						<span class="paper_info_list_title mar_left">当前总分数</span><i class="paper_info_nowscore">0</i>
+					</li>
+				</ul>
+				<div id="enter_paper_ensure">
+                    <a class="a_demo_four" href="javascript:;" id="enter_paper_ensure_btn">确认录入</a>
+                </div>
+				<!--添加类型窗口-->
+				<div id="add_type_window" style="display: none;">
+					<div><span>名称</span><input class="add_type_name" type="text" /></div>
+					<button class="add_type_btn">添加</button>
+				</div>
+			</div>
+			<div class="enter_objective_item" title="客观题录入" data-options="iconCls:'icon-edit'">
+				<div class="enter_objective_item_info">
+					<p><span>目前选择题个数：</span><i class="objective_item_count">0</i></p>
+					<p>录入设置：</p>
+					<p style="padding-left: 60px;">
+						<span>默认选项个数</span>
+						<input type="text" value="4" />
+						<span style="margin-left: 20px;">默认分数</span>
+						<input type="text" value="5" />
+					</p>
+					<p style="padding-left: 60px;">
+	                    <a class="a_demo_four" href="javascript:;" id="add_radio">添加单选</a>
+	                    <a class="a_demo_four" href="javascript:;" id="add_checked" style="margin-left: 40px;">添加多选</a>
+					</p>
+				</div>
+				<ul class="radio_item hide">
+					<li class="subject">
+						<span>问题</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+					</li>
+					<li class="item clone">
+						<span><input type="radio" name="single_choise" />A</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="hide remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="radio" name="single_choise" />B</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="radio" name="single_choise" />C</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="radio" name="single_choise" />D</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li style="padding-left: 300px;">
+						<a href="javascript:;" class="add_item">添加更多选项 &gt;&gt;</a>
+					</li>
+					<li style="padding-left: 40px;"><span>设置分数：</span><input type="text" value="5" style="width: 60px;" /></li>
+				</ul>
+				<ul class="cheched_item hide">
+					<li class="subject">
+						<span>问题</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+					</li>
+					<li class="item clone">
+						<span><input type="checkbox" name="single_choise" />A</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="hide remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="checkbox" name="single_choise" />B</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="checkbox" name="single_choise" />C</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="checkbox" name="single_choise" />D</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li style="padding-left: 300px;">
+						<a href="javascript:;" class="add_item">添加更多选项 &gt;&gt;</a>
+					</li>
+					<li style="padding-left: 40px;"><span>设置分数：</span><input type="text" value="5" style="width: 60px;" /></li>
+				</ul>
+			</div>
+			<div class="enter_subjective_item" title="主观题录入" data-options="iconCls:'icon-edit'">
+				<div class="enter_subjective_item_info">
+					<p><span>目前选择题个数：</span><i class="objective_item_count">0</i></p>
+					<p>录入设置：</p>
+					<p style="padding-left: 60px;">
+						<span style="margin-left: 20px;">默认分数</span>
+						<input type="text" value="15" />
+					</p>
+					<p style="padding-left: 60px;">
+	                    <a class="a_demo_four" href="javascript:;" id="add_subject">添加</a>
+					</p>
+				</div>
+				<ul class="subject_item hide">
+					<li class="subject">
+						<span>问题</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+					</li>
+					<li class="item" style="position: relative;padding-left: 30px;">
+						<span style="position: absolute;top: 0;left: 0;">答案</span>
+						<textarea style="width: 360px;max-width: 360px;height: 46px;"></textarea>
+					</li>
+					<li class="item">
+						<span>解题思路</span>
+						<input type="text" />
+					</li>
+					<li ><span>设置分数：</span><input type="text" value="15" style="width: 60px;" /></li>
+				</ul>
+			</div>
+		</div>
+		<!--试题详情窗口-->
+		<div id="detail_window" style="display: none;" class="easyui-accordion">
+			<div class="enter_paper_info" title="试卷信息" data-options="iconCls:'icon-save'">
+				<ul class="paper_info_list">
+					<li>
+						<span class="paper_info_list_title">试卷类型</span>
+						<input id="paper_info_type2" class="easyui-combobox" value="英语" style="width:120px;height: 26px;" />
+							
+						<button id="add_paper_type2">添加类型</button>
+						<div id="paper_type_dialog2" style="font-size: 16px;display: none;">
+							<label style="display: block;line-height: 60px;text-align: center;">名称：<input type="text" class="dialog_name" /></label>
+							<button class="dialog_ensure" style="display: block;margin: 10px auto;">添加</button>
+						</div>
+					</li>
+					<li><span class="paper_info_list_title">试卷名称</span><input type="text" class="paper_info_name" /></li>
+					<li>
+						<span class="paper_info_list_title">试卷难度</span>
+						<select name="paper_info_level" id="paper_info_level2" class="easyui-combobox" style="width:120px;height: 26px;"
+							data-options="panelHeight:'auto',
+										  onChange:function(newValue, oldValue){
+										  	$('#paper_info_level2').val(newValue);
+										  }">
+							<option value="easy">简单</option>
+							<option value="normal">中等</option>
+							<option value="hard">困难</option>
+						</select>
+						<span class="paper_info_list_title">考试类型</span>
+						<select name="paper_info_testtype" id="paper_info_testtype2" class="easyui-combobox" style="width:120px;height: 26px;"
+							data-options="panelHeight:'auto',
+										  onChange:function(newValue, oldValue){
+										  	$('#paper_info_testtype2').val(newValue);
+										  }">
+							<option value="open">开卷</option>
+							<option value="close">闭卷</option>
+						</select>
+					</li>
+					<li><span class="paper_info_list_title">考试分数</span><input type="text" class="paper_info_score" /></li>
+					<li>
+						<span class="paper_info_list_title">备注</span><textarea class="paper_info_note"></textarea>
+						<span class="paper_info_list_title mar_left">当前总分数</span><i class="paper_info_nowscore">100</i>
+					</li>
+				</ul>
+				<div id="enter_paper_ensure2">
+                    <a class="a_demo_four" href="javascript:;" id="enter_paper_ensure_btn2">修改</a>
+                    <a class="a_demo_four" href="javascript:;" id="enter_paper_ensure_btn3">返回</a>
+                </div>
+				<!--添加类型窗口-->
+				<!--<div id="add_type_window2" style="display: none;">
+					<div><span>名称</span><input class="add_type_name" type="text" /></div>
+					<button class="add_type_btn">添加</button>
+				</div>-->
+			</div>
+			<div class="enter_objective_item" title="客观题详情" data-options="iconCls:'icon-edit'">
+				<div class="enter_objective_item_info">
+					<p><span>目前选择题个数：</span><i class="objective_item_count">0</i></p>
+					<p>录入设置：</p>
+					<p style="padding-left: 60px;">
+						<span>默认选项个数</span>
+						<input type="text" value="4" />
+						<span style="margin-left: 20px;">默认分数</span>
+						<input type="text" value="5" />
+					</p>
+					<p style="padding-left: 60px;">
+	                    <a class="a_demo_four" href="javascript:;" id="add_radio2">添加单选</a>
+	                    <a class="a_demo_four" href="javascript:;" id="add_checked2" style="margin-left: 40px;">添加多选</a>
+					</p>
+				</div>
+				<ul class="radio_item hide">
+					<li class="subject">
+						<span>问题</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+					</li>
+					<li class="item clone">
+						<span><input type="radio" name="single_choise" />A</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="hide remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="radio" name="single_choise" />B</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="radio" name="single_choise" />C</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="radio" name="single_choise" />D</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li style="padding-left: 300px;">
+						<a href="javascript:;" class="add_item">添加更多选项 &gt;&gt;</a>
+					</li>
+					<li style="padding-left: 40px;"><span>设置分数：</span><input type="text" value="5" style="width: 60px;" /></li>
+				</ul>
+				<ul class="cheched_item hide">
+					<li class="subject">
+						<span>问题</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+					</li>
+					<li class="item clone">
+						<span><input type="checkbox" name="single_choise" />A</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="hide remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="checkbox" name="single_choise" />B</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="checkbox" name="single_choise" />C</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li class="item">
+						<span><input type="checkbox" name="single_choise" />D</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+						<a href="javascript:;" class="remove_item">删除</a>
+					</li>
+					<li style="padding-left: 300px;">
+						<a href="javascript:;" class="add_item">添加更多选项 &gt;&gt;</a>
+					</li>
+					<li style="padding-left: 40px;"><span>设置分数：</span><input type="text" value="5" style="width: 60px;" /></li>
+				</ul>
+			</div>
+			<div class="enter_subjective_item" title="主观题详情" data-options="iconCls:'icon-edit'">
+				<div class="enter_subjective_item_info">
+					<p><span>目前选择题个数：</span><i class="objective_item_count">0</i></p>
+					<p>录入设置：</p>
+					<p style="padding-left: 60px;">
+						<span style="margin-left: 20px;">默认分数</span>
+						<input type="text" value="15" />
+					</p>
+					<p style="padding-left: 60px;">
+	                    <a class="a_demo_four" href="javascript:;" id="add_subject2">添加</a>
+					</p>
+				</div>
+				<ul class="subject_item hide">
+					<li class="subject">
+						<span>问题</span>
+						<input type="text" />
+						<label class="upload_btn">上传图片<input type="file" style="display: none;"></label>
+						<img src="http://placehold.it/20x20" alt="" style="height: 20px;" />
+					</li>
+					<li class="item" style="position: relative;padding-left: 30px;">
+						<span style="position: absolute;top: 0;left: 0;">答案</span>
+						<textarea style="width: 360px;max-width: 360px;height: 46px;"></textarea>
+					</li>
+					<li class="item">
+						<span>解题思路</span>
+						<input type="text" />
+					</li>
+					<li ><span>设置分数：</span><input type="text" value="15" style="width: 60px;" /></li>
+				</ul>
+			</div>
+		</div>
+		
+    	
+    	<!--my js-->
+    	<script src="../js/question.js"></script>
+    	
+	</body>
+</html>

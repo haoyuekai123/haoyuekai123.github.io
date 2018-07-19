@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>账户管理</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+    	<link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	    <script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/account.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>账户管理</h2>
+			<p>本系统支持多用户操作。通过此页可以管理本系统的用户，并未每个用户指定系统功能及对象访问权限。</p>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="create" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-add'">创建</a> |
+					<a id="remove" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">删除</a> |
+					<a id="logout" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-no'">注销</a> |
+					<a id="recover" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">恢复</a> |
+					<a id="reload" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a> |
+					<a id="impower" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-tip'">授权</a>
+				</div>
+				<div class="tit_right">
+					<label>用户名： <input type="text" id="user" /></label>
+					<label>注册日期： <input type="text" id="startTime" readonly /> 到 <input type="text" id="endTime" readonly /></label>
+					<label>用户状态： <input type="text" id="state" value="全部" /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/account.js"></script>
+	</body>
+</html>

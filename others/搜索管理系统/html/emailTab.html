@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>邮件选项</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+    	<link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	    <script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/emailTab.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>邮件选项</h2>
+			<p>系统可以利用您企业中已有的邮件服务器来发送和接受相关的邮件。例如：用户在取回自己的账户信息时，系统可以通过该邮件服务器来发送邮件给用户。</p>
+		</header>
+		<section>
+			<ul class="main">
+				<li>
+					<div class="main_left">
+						<h3>SMTP邮件服务器</h3>
+						<p>请指定可用的邮件服务器主机名和通讯端口号。</p>
+						<p>注意：这些设置必须与您的邮件服务器设置完全一样。</p>
+					</div>
+					<div class="main_right">
+						<label>
+							<p>SMTP服务器：</p>
+							<input type="text" id="SMTP" />
+						</label>
+						<label>
+							<p>端口号：</p>
+							<input type="text" id="port" />
+						</label>
+					</div>
+				</li>
+				<li>
+					<div class="main_left">
+						<h3>SMTP服务器登录信息</h3>
+						<p>请指定可用的邮箱及其登录认证信息。系统发送邮件时将使用此邮箱作为发件人的地址。</p>
+					</div>
+					<div class="main_right">
+						<label><input type="checkbox" id="isApprove" checked />服务器需要登录认证</label>
+						<label>
+							<p>登录用户：</p>
+							<input type="text" id="userName" />
+						</label>
+						<label>
+							<p>登录密码：</p>
+							<input type="password" id="pwd" />
+						</label>
+					</div>
+				</li>
+				<li>
+					<div class="main_left">
+						<h3>邮件中使用的管理服务器域名</h3>
+						<p>在发送的邮件中，会向用户提示一些相关系统功能的地址链接。链接中使用的管理服务器域名若与当前服务器的机器名（<span class="machine">WIN-NOCP99IDTBB</span>）不同，请在此指定要使用的域名。例如：当管理员为管理服务器指定了DNS别名时，就需要设置此项。若此项未指定，则默认指定当前服务器的机器名：<span class="machine">WIN-NOCP99IDTBB</span>。</p>
+					</div>
+					<div class="main_right">
+						<label>
+							<p>管理服务器域名：</p>
+							<input type="text" id="areaName" />
+						</label>
+					</div>
+				</li>
+				<li>
+					<div class="main_left">
+						<h3>SSL加密</h3>
+						<p>请指定本系统是否使用SSL加密通道与邮件服务器进行通讯。若使用，则邮件服务器必须支持此功能。</p>
+					</div>
+					<div class="main_right">
+						<label><input type="checkbox" id="isSSL" checked />启用SSL加密</label>
+					</div>
+				</li>
+			</ul>
+			<div class="btns">
+				<a id="save" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>	 &nbsp;
+				<a id="cancel" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>	
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/emailTab.js"></script>
+	</body>
+</html>

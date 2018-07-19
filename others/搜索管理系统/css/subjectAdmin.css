@@ -1,0 +1,118 @@
+@charset "utf-8";
+body{
+	background: #fff;
+	width: 100%;
+	min-width: 1200px;
+}
+header{
+	width: 100%;
+	padding-left: 80px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/60x60?text=专题管理");
+	background-size: 60px 60px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+header p{
+	font-size: 14px;
+	line-height: 24px;
+}
+section .title{
+	width: 100%;
+	height: 35px;
+	padding-top: 5px;
+	background: linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -o-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -ms-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -moz-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -webkit-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+}
+.title div{
+	float: left;
+	padding-left: 10px;
+}
+.tit_left{
+	width: 250px;
+}
+.tit_center{
+	width: 250px;
+}
+.title .tit_right{
+	width: 300px;
+	float: right;
+	text-align: right;
+	padding-right: 20px;
+}
+.title span.tit_txt{
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 14px;
+	line-height: 24px;
+}
+#search_txt{
+	font-size: 14px;
+	line-height: 22px;
+	width: 120px;
+	border: 1px solid #a9a9a9;
+	outline: none;
+}
+section ul li{
+	width: 100%;
+	line-height: 40px;
+}
+.list_title li{
+	background: rgb(215, 232, 255);
+	color: #0052A3;
+}
+section ul li span{
+	display: inline-block;
+	text-align: center;
+}
+.list_checkbox{
+	width: 3.3%;
+}
+.list_num{
+	width: 5%;
+}
+.list_name{
+	width: 11.7%;
+}
+.list_cont .list_name{
+	cursor: pointer;
+	color: #092db1;
+}
+.list_cont .list_name:hover{
+	text-decoration: underline;
+}
+.list_group{
+	width: 11.7%;
+}
+.list_save{
+	width: 6.7%;
+}
+.list_sort{
+	width: 6.7%;
+}
+.list_timing{
+	width: 7.5%;
+}
+.list_validity{
+	width: 7.5%;
+}
+.list_change{
+	width: 11.7%;
+}
+.list_standard{
+	width: 5%;
+}
+.list_count1{
+	width: 7.5%;
+}
+.list_count2{
+	width: 7.5%;
+}

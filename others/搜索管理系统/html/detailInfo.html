@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>明细信息源统计</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/detailInfo.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>统计：明细信息源统计</h2>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="reload_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="itemBtn on">明细信息源统计</span> | <span class="itemBtn">信息员记录数排序</span>
+				</div>
+				<div class="tit_right">
+					<label>专题组： <input type="text" id="sub_group" /></label>
+					<label>专题： <input type="text" id="sub_name" /></label>
+					<label>信息源名称： <input type="text" id="info_name" /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<ul class="list_title">
+				<li>
+					<span class="info_num">信息源号</span
+					><span class="sub_group">专题组</span
+					><span class="sub_name">专题</span
+					><span class="info_name">信息源名称</span
+					><span class="address">初始地址</span
+					><span class="domain">域名</span
+					><span class="top_domain">顶级域名</span
+					><span class="info_type">类型</span
+					><span class="create_man">创建人</span
+					><span class="set_man">设置人</span
+					><span class="note_count">记录数</span
+					><span class="state">状态</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--list start-->
+				<li>
+					<span class="info_num">85695</span>
+					<span class="sub_group">论坛</span>
+					<span class="sub_name">综合</span>
+					<span class="info_name">东方财富股吧>股吧总版</span>
+					<span class="address">https://guba.eastmoney.com</span>
+					<span class="domain">eastmoney.com</span>
+					<span class="top_domain">eastmoney.com</span>
+					<span class="info_type">网站</span>
+					<span class="create_man">admin</span>
+					<span class="set_man">admin</span>
+					<span class="note_count">301915</span>
+					<span class="state"><span class="state_img"></span></span>
+				</li>
+				<!--list end-->
+			</ul>
+			<!--分页-->
+			<div id="pp"></div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/detailInfo.js"></script>
+	</body>
+</html>

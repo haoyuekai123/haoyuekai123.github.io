@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/home.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/echarts.min.js"></script>
+	</head>
+	<body>
+		<div class="item">
+			<h3>服务状态</h3>
+			<div class="item_main clear">
+				<div class="cont1"><span>搜集服务：</span><i class="state">运行中</i><button id="pause_btn">停止</button></div>
+				<div class="cont2"><span>所在服务器：</span><i>WIN-NOCP99IDTBB</i></div>
+			</div>
+		</div>
+		<div class="item">
+			<h3>搜集服务器系统资源</h3>
+			<div class="item_main myChart" id="myChart">
+				
+			</div>
+		</div>
+		<div class="item">
+			<h3>信息搜集服务</h3>
+			<ul class="item_main">
+				<li><span>当前搜集速度：</span><i>24条/分钟</i></li>
+				<li><span>今日搜集记录数：</span><i>43980</i></li>
+				<li><span>累计搜集记录数：</span><i>1470909</i></li>
+			</ul>
+		</div>
+		<div class="item c_1b">
+			<h3>信息源采集概览</h3>
+			<div class="item_main myChart" id="myChart2">
+				<div class="cont">
+					<p>采集信息源数</p>
+					<div class="scale_box">
+						<div class="scale"></div>
+					</div>
+					<span class="scale_txt">2124个</span>
+				</div>
+				<div class="cont">
+					<p>采集任务数</p>
+					<div class="scale_box">
+						<div class="scale"></div>
+					</div>
+					<span class="scale_txt">1645</span>
+				</div>
+				<div class="cont">
+					采集警报<span class="warn_img"></span>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="../js/home.js"></script>
+		
+		
+	</body>
+</html>

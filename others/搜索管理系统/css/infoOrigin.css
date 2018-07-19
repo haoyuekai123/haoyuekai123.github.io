@@ -1,0 +1,232 @@
+@charset "utf-8";
+.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+html{
+	height: 100%;
+}
+body{
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	min-width: 1200px;
+	display: flex;
+	flex-direction: column;
+}
+header{
+	width: 100%;
+	padding-left: 60px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/40x40?text=设置");
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	height: 50px;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+section{
+	flex: 1;
+	width: 100%;
+    display: flex;
+	flex-direction: row;
+}
+section .left{
+	width: 180px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+section .right{
+	flex: 1;
+	border-left: 1px solid #ddd;
+}
+section .right .title{
+	width: 100%;
+	height: 35px;
+	padding: 5px 20px;
+	font-size: 14px;
+	background: linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -o-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -ms-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -moz-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -webkit-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+}
+section .left .title{
+	background: #d4e8f9;
+	height: 35px;
+}
+.left .title span{
+	display: block;
+	line-height: 35px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+}
+.left .title span.on{
+	background: #00BBEE;
+	color: #fff;
+}
+.left .search{
+	height: 36px;
+	line-height: 36px;
+}
+.left .search input{
+	width: 65%;
+	line-height: 24px;
+	border: 1px solid #999;
+}
+.left ul{
+	width: 100%;
+	flex: 1;
+	overflow-y: scroll;
+}
+section ul li{
+	width: 100%;
+	line-height: 36px;
+	margin-top: 2px;
+}
+section .left ul li{
+	cursor: pointer;
+	background: #F0FAFA;
+	font-size: 12px;
+	padding: 0 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+section .left ul li:hover{
+	background: #50BDFB;
+	color: #fff;
+}
+section .left ul li.on{
+	background: #50BDFB;
+	color: #fff;
+}
+.hide{
+	display: none;
+}
+
+.right .filter_box{
+	width: 100%;
+	height: 36px;
+	border-bottom: 1px dashed #eee;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.filter_box label{
+	margin-right: 15px;
+}
+.filter_box label input{
+	width: 100px;
+}
+.filter_box input.bor{
+	line-height: 24px;
+	border: 1px solid #6B9CDE;
+	border-radius: 3px;
+}
+.filter_box input.nav_height{
+	width: 50px;
+}
+.state_box{
+	width: 100%;
+	padding: 5px 20px 5px 10px;
+}
+.state_box .state_left{
+	float: left;
+	width: 70%;
+}
+.state_box .state_left label{
+	display: block;
+	width: 200px;
+	float: left;
+	line-height: 24px;
+}
+.state_box .state_right{
+	float: right;
+	padding-top: 5px;
+	padding-right: 20px;
+}
+.c_3B553B{
+	color: #3B553B;
+}
+.state_box .state_right a{
+	color: #0052A3;
+}
+.list_title li{
+	background: rgb(233, 241, 251);
+	color: #0081C2;
+}
+.right ul li span{
+	display: inline-block;
+}
+.right ul li span a{
+	color: #092DB1;
+}
+.net_checkbox{
+	width: 3%;
+	text-align: center;
+}
+.info_num{
+	width: 4%;
+	text-align: center;
+}
+.info_name{
+	width: 18%;
+}
+.info_height{
+	width: 3%;
+	text-align: center;
+}
+.info_note{
+	width: 17%;
+}
+.info_state{
+	width: 6%;
+	text-align: center;
+}
+.info_state span{
+	line-height: 24px;
+	height: 24px;
+}
+.info_state a{
+	line-height: 24px!important;
+	height: 24px!important;
+}
+.info_state input{
+	width: 61px;
+	line-height: 24px!important;
+	height: 24px!important;
+}
+.info_visited{
+	width: 4%;
+	text-align: center;
+}
+.info_sub{
+	width: 10%;
+	text-align: center;
+}
+.info_time{
+	width: 12%;
+	text-align: center;
+}
+.info_count{
+	width: 4%;
+	text-align: center;
+}
+.info_set{
+	width: 4%;
+	text-align: center;
+}
+.info_research{
+	width: 5%;
+	text-align: center;
+}
+.info_part{
+	width: 4%;
+	text-align: center;
+}
+

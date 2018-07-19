@@ -1,0 +1,24 @@
+/*焦点图*/
+#liangfajdt ul li{float:left; border-left:#4d4d4d 1px solid; height:500px; overflow:hidden; cursor:pointer; background:#000; padding:0px;}	
+#liangfajdt ul li.kwicks-selected{border-left:#fff 1px solid}
+#liangfajdt ul li.jdtwurightxian{border-right:#ffffff 1px solid;}	
+.jdt_img{position:absolute; top:0px; left:0px; z-index:444}
+#liangfajdt ul li.selected{width:600px;}
+#liangfajdt ul li a{ text-decoration:none; color:#FFF;}
+#liangfajdt ul li a:hover{ color:#fff;}
+.lf_jdttitle{position:absolute; top:450px; width:600px; line-height:45px; font-family:'微软雅黑'; font-size:20px; text-align:center; z-index:666;-webkit-transition: bottom .2s ease-in-out;-moz-transition: bottom .2s ease-in-out;-o-transition: bottom .2s ease-in-out;-ms-transition: bottom .2s ease-in-out;transition: bottom .2s ease-in-out; opacity:0;FILTER:alpha(opacity=0); moz-opacity:0;}
+.lf_jdtbg{position:absolute; top:450px; width:600px; height:50px; background:#000; opacity:0;FILTER:alpha(opacity=0); moz-opacity:0; z-index:555;-webkit-transition: bottom .2s ease-in-out;-moz-transition: bottom .2s ease-in-out;-o-transition: bottom .2s ease-in-out;-ms-transition: bottom .2s ease-in-out;transition: bottom .2s ease-in-out;}
+.kwicks-expanded .lf_jdttitle{ opacity:1;FILTER:alpha(opacity=100); moz-opacity:1;}
+.kwicks-expanded .lf_jdtbg{ opacity:0.5;FILTER:alpha(opacity=50); moz-opacity:0.5;}
+.jdt_img img{opacity:0.5; filter:alpha(opacity=50);-webkit-transition: opacity .2s ease-in-out;-moz-transition: opacity .2s ease-in-out;-o-transition: opacity .2s ease-in-out;-ms-transition: opacity .2s ease-in-out;transition: opacity .2s ease-in-out;}
+.kwicks-expanded .jdt_img img{opacity:1; filter:alpha(opacity=100);}
+ul.tsgs li{width:280px; float:left; line-height:14px; height:14px; overflow:hidden; padding:17px 10px 0 10px; background:url(images/side_sl.gif) -20px -159px no-repeat; text-align:left}
+ul.tsgs li.on{width:230px; padding:17px 0px 0 10px;}
+ 
+.kwicks{display:block;list-style-type:none;list-style:none;position:relative;margin:0;padding:0}
+.kwicks>*{display:block;overflow:hidden;padding:0;margin:0}
+.kwicks.kwicks-processed>*{margin:0;position:absolute}
+.kwicks-horizontal>*{float:left}
+.kwicks-horizontal>:first-child{margin-left:0}
+.kwicks-vertical>:first-child{margin-top:0}
+

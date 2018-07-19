@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="郝月凯的个人空间"/>
+	<meta name="author" content="郝月凯 age:24 "/>
+	<meta name="keywords" content="郝月凯,郝月凯的个人空间,个人空间"/>
+	<meta name="contact" content="tel:18811626300 e-mail:hao18233132132@163.com"/>
+	<meta name="generator" content="Hbulider"/>
+	<META NAME="COPYRIGHT" CONTENT="© 郝月凯">
+    <title>扫雷</title>
+    <style type="text/css">
+        #btn,#pause{
+            width: 200px;
+            hright: 36px;
+            position: fixed;
+            left:2%;
+            top:0;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 0 5px #ccc;
+        }
+        p{
+            width:200px;
+            height:36px;
+            position: fixed;
+            left:2%;
+            top:80px;
+            font-size:20px;
+        }
+        p strong{
+            color: #f00;
+        }
+        #pause{
+            top:40px;
+            display: none;
+        }
+        @keyframes divs {
+            0%{
+                opacity: 0;
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+            100%{
+                opacity: 1;
+                transform: rotateY(360deg) rotateX(360deg);
+            }
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var num=0;
+            var onOff2=true;
+            var iA=null;
+            function game(boxSize,num,rate){
+                this.boxWidth=boxSize||600;
+                this.boxHeight=this.boxWidth;
+                this.num=num||8;
+                this.rate=rate||0.2;
+                this.box;
+                this.minedArr=[];
+                this.boomArr=[];
+            }
+            game.prototype={
+                play : function(){
+                    this.setBox();
+                    this.setSbox();
+                    this.setBoom();
+                    this.clickStuff();
+                },
+                setBox : function(){
+                    this.box=$("<div>");
+                    this.box.css({
+                        width:this.boxWidth,
+                        height:this.boxHeight,
+                        margin:"10px auto",
+                        border:"1px solid #000",
+                        position:"relative"
+                    });
+                    this.box.appendTo($("body"));
+                    $("<div class='mask'>").css({
+                        width:"100%",
+                        height:"100%",
+                        position:"absolute",
+                        left:"0",
+                        top:"0",
+                        opacity:"0.2",
+                        background:"#fff",
+                        zIndex:"-1"
+                    }).appendTo(this.box);
+
+                },
+                setSbox : function(){
+                    for(var i=0;i<(this.num*this.num);i++){
+                        var divs=$("<divs>");
+                        divs.css({
+                            width:this.boxWidth/this.num,
+                            height:this.boxWidth/this.num,
+                            float:"left",
+                            background:"url(img/bj.png) no-repeat",
+                            backgroundSize:"cover",
+                            opacity:0,
+                            animation:"divs 0.3s ease "+(i*0.05)+"s 1 forwards"
+                        })
+                        this.box.append(divs);
+                        this.minedArr.push(divs);
+                    }
+                },
+                setBoom : function(){
+                    var arr1=[];
+                    for(var i=0;i<(this.num*this.num);i++){
+                        var random=Math.random();
+                        arr1.push( (random>this.rate) ? 0 : -1 );
+                    }
+                    var arr2=[];//转化为二维数组
+                    for(var i=0;i<this.num;i++){
+                        arr2[i]=[];
+                        for(var j=0;j<this.num;j++){
+                            arr2[i][j]=arr1[((i*this.num)+j)];
+                        }
+                    }
+                    var boom=[];//存放每一个雷区的雷或周围雷数
+                    for(var i=0;i<this.num;i++){
+                        boom[i]=[];
+                        for(var j=0;j<this.num;j++){
+                            if(arr2[i][j]==-1){
+                                boom[i][j]="boom";
+                            }else{
+                                var onum=this.num-1;
+                                var b1=( (j>0) ? arr2[i][j-1] : 0 )//左边是否有雷，有-1，无0；
+                                var b2=( (j<onum) ? arr2[i][j+1] : 0 )//右边是否有雷，有-1，无0；
+                                var b3=( (i>0) ? arr2[i-1][j] : 0 )//上边是否有雷，有-1，无0；
+                                var b4=( (i<onum) ? arr2[i+1][j] : 0 )//下边是否有雷，有-1，无0；
+                                var b5=( (i>0&&j>0) ? arr2[i-1][j-1] :0 )//左上
+                                var b6=( (i<onum&&j>0) ? arr2[i+1][j-1] :0 )//左下
+                                var b7=( (i<onum&&j<onum) ? arr2[i+1][j+1] :0 )//右下
+                                var b8=( (i>0&&j<onum) ? arr2[i-1][j+1] :0 )//右上
+                                boom[i][j]=-(b1+b2+b3+b4+b5+b6+b7+b8);
+                            }
+                        }
+                    }
+                    for(var i=0;i<this.num;i++){
+                        for(var j=0;j<this.num;j++){
+                            this.boomArr.push(boom[i][j]);
+                        }
+                    }
+                },
+                clickStuff : function(){
+                    var that=this;
+                    $(this.minedArr).each(function(i){
+                        var index=i;
+                        this.click(function(){
+                            var lei=that.boomArr[index];
+                            if(lei=="boom"){
+                                $(this).css({
+                                    background:"url(img/dl.png)",
+                                    backgroundSize:"cover"
+                                });
+                                setTimeout(function(){
+                                    var onOff=confirm("再来一局？");
+                                    if(onOff){
+                                        that.restart();
+                                    }else{
+                                        alert("页面将于1 s 后关闭");
+                                        setTimeout(function(){
+                                            window.close();
+                                        },1000);
+                                    }
+                                },100)
+                            }else{
+                                $(this).html(lei).css({
+                                    textAlign:"center",
+                                    fontWeight:"bold",
+                                    color:"#f00",
+                                    fontSize:(that.boxHeight/that.num)/2+"px",
+                                    lineHeight:that.boxHeight/that.num+"px",
+                                    background:"url(img/bj2.png) no-repeat",
+                                    backgroundSize:"cover"
+                                })
+                            }
+                        })
+                    })
+                },
+                restart : function(){
+                    this.box.remove();
+                    this.minedArr=[];
+                    this.boomArr=[];
+                    this.play();
+                    num=-1;
+                }
+            }
+
+            $("#btn").click(function(){
+                $("#times").html("0s");
+                iA=setInterval(function(){
+                    num++;
+                    $("#times").html(num+"s");
+                },1000);
+                var boom=new game(600,12,0.3);
+                boom.play();
+                $(this).html("游戏中。。。");
+                $(this).attr("disabled","true");
+                $("#pause").show().click(function(){
+                    if(onOff2){
+                        $(".mask").css({
+                            zIndex:"2"
+                        });
+                        clearInterval(iA);
+                        iA=null;
+                        $(this).html("继续游戏");
+                    }else{
+                        $(".mask").css({
+                            zIndex:"-1"
+                        });
+                        iA=setInterval(function(){
+                            num++;
+                            $("#times").html(num+"s");
+                        },1000);
+                        $(this).html("暂停游戏");
+                    }
+                    onOff2=!onOff2;
+                });
+
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <button id="btn">开始游戏</button>
+    <button id="pause">暂停游戏</button>
+    <p>用时：<strong id="times"></strong></p>
+</body>
+</html>

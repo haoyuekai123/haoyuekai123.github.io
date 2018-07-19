@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>明细信息源统计</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/subInfo.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>统计：专题信息源统计</h2>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="reload_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="itemBtn on">专题信息源统计</span> | <span class="itemBtn">专题记录数排序</span> | <span class="itemBtn">信专题信息源数排序</span>
+				</div>
+				<div class="tit_right">
+					<label>专题组： <input type="text" id="sub_group" /></label>
+					<label>专题名称： <input type="text" id="sub_name" /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<ul class="list_title">
+				<li>
+					<span class="sub_num">专题号</span
+					><span class="sub_group">专题组</span
+					><span class="sub_name">专题名称</span
+					><span class="save_as">保存到</span
+					><span class="search_all">全文检索</span
+					><span class="sort">自动分类</span
+					><span class="limit_time">时限（天）</span
+					><span class="indate">归档有效期（天）</span
+					><span class="create_time">创建时间</span
+					><span class="info_mum">信息源数</span
+					><span class="note_count">记录数</span
+					><span class="state">就绪</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--list start-->
+				<li>
+					<span class="sub_num">57</span>
+					<span class="sub_group">论坛</span>
+					<span class="sub_name">综合</span>
+					<span class="save_as">数据库</span>
+					<span class="search_all">√</span>
+					<span class="sort">√</span>
+					<span class="limit_time">2000</span>
+					<span class="indate">0</span>
+					<span class="create_time">2013-02-04</span>
+					<span class="info_mum">147</span>
+					<span class="note_count">496253</span>
+					<span class="state"><span class="state_img"></span></span>
+				</li>
+				<!--list end-->
+			</ul>
+			<!--分页-->
+			<div id="pp"></div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/subInfo.js"></script>
+	</body>
+</html>

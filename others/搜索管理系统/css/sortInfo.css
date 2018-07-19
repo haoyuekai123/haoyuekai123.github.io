@@ -1,0 +1,162 @@
+@charset "utf-8";
+body{
+	background: #fff;
+	width: 100%;
+	min-width: 1200px;
+}
+header{
+	width: 100%;
+	padding-left: 60px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/40x40?text=设置");
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+section{
+	margin-top: 10px;
+}
+section .nowSort{
+	line-height: 24px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+section .nowSort span{
+	font-size: 14px;
+	color: #EDC11C;
+}
+section .title{
+	width: 100%;
+	height: 35px;
+	padding: 5px 20px;
+	font-size: 14px;
+	background: linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -o-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -ms-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -moz-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -webkit-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+}
+.title .tit_left{
+	float: left;
+}
+.title .tit_right{
+	float: right;
+}
+
+.search_prompt{
+	font-size: 14px;
+	line-height: 36px;
+	padding-left: 20px;
+}
+section ul li{
+	width: 100%;
+	line-height: 36px;
+	margin-top: 2px;
+}
+.list_title li{
+	background: rgb(233, 241, 251);
+	color: #0081C2;
+}
+.list_title li:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+section ul li span{
+	display: block;
+	float: left;
+	padding: 0 5px;
+}
+section ul li span a{
+	color: #092DB1;
+}
+.sort_checkbox{
+	width: 5%;
+	text-align: center;
+}
+.sort_name{
+	width: 20%;
+}
+.sort_word{
+	width: 40%;
+}
+.sort_discribe{
+	width: 25%;
+}
+.sort_edit{
+	width: 9%;
+	text-align: center;
+}
+.sort_edit .edit_btn{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #999;
+	border-radius: 3px;
+	background: url(../images/pencil.png) no-repeat center;
+}
+.sort_edit .edit_btn:hover{
+	background-color: #f0f0f0;
+	border-color: #666;
+}
+.list_cont li span{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+
+#win li{
+	width: 100%;
+	border-bottom: 1px solid #000;
+}
+#win li:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.win_left{
+	width: 40%;
+	float: left;
+}
+.win_left h2{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #12126a;
+}
+.win_left p{
+	text-indent: 20px;
+	font-size: 12px;
+	line-height: 20px;
+}
+.win_right{
+	width: 60%;
+	float: right;
+	background: #dcece9;
+	padding: 10px 10px 20px;
+}
+.win_right span{
+	display: block;
+	line-height: 30px;
+	font-size: 12px;
+}
+.win_right input{
+	width: 100%;
+	line-height: 24px;
+	border-radius: 3px;
+}
+.win_right textarea{
+	width: 100%;
+	line-height: 24px;
+	border-radius: 3px;
+	height: 72px;
+	resize: none;
+	overflow-y: scroll;
+}
+.win_btns{
+	width: 100%;
+	padding-top: 30px;
+	text-align: center;
+}
+.win_btns a:first-child{
+	margin-right: 100px;
+}
+

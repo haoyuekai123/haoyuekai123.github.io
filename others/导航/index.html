@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<base target="_blank">
+<title>index</title>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<link href="css/jq22.css" type="text/css" rel="stylesheet">
+<script src="js/jquery.kwicks.min.js"></script>
+</head>
+
+<body id="body_adv" style="background: url(img/body_bg.png);">
+<h1 id="welcome_to_myzone" style="text-align: center;margin: 50px 0;transform: 0.5s;">欢迎来到我的小屋，点击下面图片观看吧！</h1>
+<div class="shw1180" style="margin: 0px auto;width:880px; height:500px;">
+  <div class="cfix md_sl">
+    <div class="col_w900 left">
+      <div style="width:880px; height:500px; overflow:hidden" id="liangfajdt">
+        <ul style="width:880px; height:500px; overflow:hidden" class="kwicks kwicks-horizontal kwicks-processed">
+          <li class="kwicks-selected kwicks-collapsed kwicks-expanded" style="left:0px;width:39px;">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/index.html"><img src="img/a1.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/index.html">我的简历</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+          <li style="left:40px;width:600px;">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/others/鲨鱼/index.html"><img src="img/a2.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/others/鲨鱼/index.html">大鲨鱼</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+          <li style="left:641px;width:39px;" class="kwicks-collapsed">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/others/打火机/index.html"><img src="img/a3.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/others/打火机/index.html">打火机</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+          <li style="left:681px;width:39px;" class="kwicks-collapsed">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/others/魔方/index.html"><img src="img/a4.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/others/魔方/index.html">3D魔方</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+          <li style="left:721px;width:39px;" class="kwicks-collapsed">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/others/love/index.html"><img src="img/a5.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/others/love/index.html">Love</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+          <li style="left:761px;width:39px;" class="kwicks-collapsed">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/others/水池/index.html"><img src="img/a1.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/others/水池/index.html">3D水池</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+          <li style="left:801px;width:39px;" class="kwicks-collapsed">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/others/成长树/index.html"><img src="img/a2.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/others/成长树/index.html">成长树</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+          <li style="right:0;width:39px;" class="kwicks-collapsed">
+            <div style="position:relative">
+              <div class="jdt_img"><a href="http://haoyuekai.duapp.com/others/photo/photo.html"><img src="img/a3.png" width="600" height="500"></a></div>
+              <div class="white lf_jdttitle"><a href="http://haoyuekai.duapp.com/others/photo/photo.html">旋转相册</a></div>
+              <div class="lf_jdtbg"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+	$(function() {
+		jdt_lie_w=($("#liangfajdt ul").width()-600)/($("#liangfajdt ul li").length-1);
+		jdt_lie_w=Math.ceil(jdt_lie_w);
+		jdt_lie_sed=$("#liangfajdt ul").width()-jdt_lie_w*($("#liangfajdt ul li").length-1);
+		$("#liangfajdt ul li").css("width",Number(jdt_lie_w)-1);
+		//$("#liangfajdt ul li.selected").css("width",jdt_lie_sed);
+		$('.kwicks').kwicks({
+			minSize : Number(jdt_lie_w)-1,
+			spacing : 1,
+			behavior: 'slideshow'
+		});
+	});
+	
+	function color(){
+		var str=""; 
+		for(var i=0;i<6;i++){
+			str=str+((Math.floor(Math.random()*16)).toString(16));
+		}
+		return "#"+str;
+	}
+	
+	setInterval(function(){
+		$("#welcome_to_myzone").css({
+			color:color()
+		})
+	},1000);
+</script>
+</body>
+</html>

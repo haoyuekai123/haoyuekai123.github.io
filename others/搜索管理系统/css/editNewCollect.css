@@ -1,0 +1,80 @@
+@charset "utf-8";
+body{
+	width: 100%;
+	min-width: 1200px;
+	background: #fff;
+}
+header{
+	width: 100%;
+	padding-left: 60px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/40x40?text=记录");
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+section{
+	width: 100%;
+	padding: 20px 20px 0;
+}
+.main{
+	width: 100%;
+	border-top: 1px solid #000;
+}
+.main li{
+	width: 100%;
+	border-bottom: 1px solid #000;
+	min-height: 40px;
+}
+.main li:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.main li .main_left{
+	width: 40%;
+	float: left;
+}
+.main li .main_right{
+	width: 60%;
+	float: right;
+	background: #D7EAFA;
+	min-height: 40px;
+	padding-left: 20px;
+}
+.c_EDC11C{
+	color: #90680a;
+}
+.lh_36{
+	font-size: 14px;
+	line-height: 36px;
+}
+.main_left h2{
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #070570;
+}
+.c_2762DE{
+	color: #2762DE;
+}
+.note_tit{
+	width: 94%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

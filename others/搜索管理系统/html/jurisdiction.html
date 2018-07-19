@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>权限管理</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+    	<link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	    <script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/jurisdiction.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>权限管理</h2>
+			<p>查看系统具有的功能权限。用户若想做任何操作，必须先拥有相应的功能权限。为了方便，建议利用系统角色和用户管理来完成对用户的授权。</p>
+		</header>
+		<section>
+			<ul class="list_title">
+				<li>
+					<span class="type">类别</span
+					><span class="jur_name">权限名称</span
+					><span class="role">授权角色数</span
+					><span class="user">授权用户数</span
+					><span class="note">备注</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--list start-->
+				<li>
+					<span class="type">专题</span>
+					<span class="jur_name">专题管理</span>
+					<span class="role">2</span>
+					<span class="user">1</span>
+					<span class="note">利用自定义的专题类别来组织和管理要搜集的信息</span>
+				</li>
+				<!--lit end-->
+			</ul>
+			<!--分页-->
+			<div id="pp"></div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/jurisdiction.js"></script>
+	</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html><html class=''>
+<head>
+	<script src='link1.js'></script>
+	<script src='link2.js'></script>
+	<script src='link3.js'></script>
+	<script src="/js/console.js"></script>
+	<meta charset='UTF-8'>
+	<meta name="robots" content="noindex">
+
+
+<style class="cp-pen-styles">body {
+  background: #000;
+}
+
+#watch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  background: -webkit-radial-gradient(#808080, #000000 70%);
+  background: radial-gradient(#808080, #000000 70%);
+  color: #fff;
+  font: bold 30px Arial, sans-serif;
+}
+
+.digit {
+  position: absolute;
+  width: 104%;
+  height: 104%;
+  margin: -2%;
+  text-align: center;
+}
+.digit span {
+  display: block;
+}
+
+.digit:nth-child(1) {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+.digit:nth-child(1) span {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.digit:nth-child(2) {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+.digit:nth-child(2) span {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.digit:nth-child(3) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.digit:nth-child(3) span {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.digit:nth-child(4) {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+.digit:nth-child(4) span {
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+}
+
+.digit:nth-child(5) {
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+.digit:nth-child(5) span {
+  -webkit-transform: rotate(-150deg);
+          transform: rotate(-150deg);
+}
+
+.digit:nth-child(6) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.digit:nth-child(6) span {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.digit:nth-child(7) {
+  -webkit-transform: rotate(210deg);
+          transform: rotate(210deg);
+}
+.digit:nth-child(7) span {
+  -webkit-transform: rotate(-210deg);
+          transform: rotate(-210deg);
+}
+
+.digit:nth-child(8) {
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
+}
+.digit:nth-child(8) span {
+  -webkit-transform: rotate(-240deg);
+          transform: rotate(-240deg);
+}
+
+.digit:nth-child(9) {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+.digit:nth-child(9) span {
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
+}
+
+.digit:nth-child(10) {
+  -webkit-transform: rotate(300deg);
+          transform: rotate(300deg);
+}
+.digit:nth-child(10) span {
+  -webkit-transform: rotate(-300deg);
+          transform: rotate(-300deg);
+}
+
+.digit:nth-child(11) {
+  -webkit-transform: rotate(330deg);
+          transform: rotate(330deg);
+}
+.digit:nth-child(11) span {
+  -webkit-transform: rotate(-330deg);
+          transform: rotate(-330deg);
+}
+
+.digit:nth-child(12) {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.digit:nth-child(12) span {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+#mickey,
+#hours,
+#minutes {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: no-repeat center center;
+  background-size: contain;
+}
+
+#mickey {
+  background-size: 70%;
+  background-position: 45% 85%;
+  z-index: 50;
+}
+
+#hours,
+#minutes,
+#minutes:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat top center;
+  background-size: 90px;
+  background-position: center 5%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+#hours {
+  z-index: 10;
+}
+
+#minutes {
+  z-index: 100;
+}
+
+#minutes:after {
+  content: '';
+  display: block;
+  -webkit-animation: seconds infinite 1s;
+          animation: seconds infinite 1s;
+}
+
+@-webkit-keyframes seconds {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes seconds {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/* Sprites */
+#mickey {
+  background-image: url("1.svg");
+}
+
+#hours.right,
+#minutes.right:after {
+  background-image: url("3.svg") !important;
+}
+
+#hours.left.back,
+#minutes.left.back:after {
+  background-image: url("4.svg") !important;
+}
+
+#hours.left,
+#minutes.left:after {
+  background-image: url("2.svg") !important;
+}
+</style></head><body>
+<div id="watch">
+  <div class="digit">
+    <span>1</span>
+  </div>
+  <div class="digit">
+    <span>2</span>
+  </div>
+  <div class="digit">
+    <span>3</span>
+  </div>
+  <div class="digit">
+    <span>4</span>
+  </div>
+  <div class="digit">
+    <span>5</span>
+  </div>
+  <div class="digit">
+    <span>6</span>
+  </div>
+  <div class="digit">
+    <span>7</span>
+  </div>
+  <div class="digit">
+    <span>8</span>
+  </div>
+  <div class="digit">
+    <span>9</span>
+  </div>
+  <div class="digit">
+    <span>10</span>
+  </div>
+  <div class="digit">
+    <span>11</span>
+  </div>
+  <div class="digit">
+    <span>12</span>
+  </div>
+  <div id="mickey"></div>
+  <div class="left" id="hours"></div>
+  <div class="right" id="minutes"></div>
+</div>
+<script src='link4.js'></script>
+<script>
+	var $hours = document.getElementById('hours');
+	var $minutes = document.getElementById('minutes');
+	function time() {
+	    'use strict';
+	    var hours = new Date().getHours();
+	    var minutes = new Date().getMinutes();
+	    if (hours >= 6 && hours < 12) {
+	        $hours.className = 'left';
+	    } else {
+	        $hours.className = 'right';
+	    }
+	    if (minutes <= 30) {
+	        $minutes.className = 'back left';
+	    } else {
+	        $minutes.className = 'left';
+	    }
+	    set($hours, 30 * hours);
+	    set($minutes, 6 * minutes);
+	}
+	time();
+	setInterval(function(){
+		time();
+	},1000);
+	function set($elmt, deg) {
+	    'use strict';
+	    if ($elmt.id === 'hours' && deg < 180) {
+	        deg = deg - 5;
+	    }
+	    if ($elmt.id === 'minutes' && deg < 180) {
+	        deg = deg + 5;
+	    } else {
+	        deg = deg - 5;
+	    }
+	    $elmt.style.transform = 'rotate(' + deg + 'deg)';
+	    $elmt.style.webkitTransform = 'rotate(' + deg + 'deg)';
+	}
+
+</script>
+</body></html>

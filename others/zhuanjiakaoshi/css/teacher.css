@@ -1,0 +1,155 @@
+
+body{
+	width: 100%;
+	padding: 0 45px;
+}
+h2{
+	line-height: 60px;
+	border-bottom: 1px solid #000;
+}
+.tool_box{
+	width: 100%;
+	height: 56px;
+	padding-top: 16px;
+	position: relative;
+}
+.tool_box label{
+	margin-left: 50px;
+}
+.tool_box label input{
+	width: 120px;
+	height: 20px;
+}
+.tool_box button{
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 16px;
+	width: 100px;
+	height: 24px;
+	border-radius: 5px;
+	background: #fff;
+	border: 1px solid #666;
+	font-size: 14px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.tool_box button.add_btn{
+	margin-right: 150px;
+}
+.tool_box button.set_btn{
+	margin-right: 290px;
+}
+.user_list{
+	width: 100%;
+	padding: 0 45;
+}
+.user_list_title li,.user_list li{
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	overflow: hidden;
+}
+.user_list li span,.user_list_title li span{
+	display: block;
+	float: left;
+}
+.list_title{
+	background: #ccc;
+}
+.list_title span{
+	border-right: 2px solid #fff;
+}
+.list_title span:last-child{
+	border: none;
+}
+.list_num{
+	width: 6%;
+}
+.list_name{
+	width: 10%;
+}
+.list_position{
+	width: 10%;
+}
+.list_tel{
+	width: 10%;
+}
+.list_IP{
+	width: 13%;
+}
+.list_account{
+	width: 12%;
+}
+.list_pwd{
+	width: 12%;
+}
+.list_state{
+	width: 9%;
+}
+.list_edit{
+	width: 18%;
+}
+#pp{
+	width: 100%;
+	margin: 40px auto 0;
+	
+}
+#dialog_box{
+	padding: 40px 20px 0;
+}
+#dialog_box ul li{
+	width: 100%;
+	height: 40px;
+	padding: 0 50px;
+	font-size: 18px;
+}
+#dialog_box ul li span{
+	display: inline-block;
+	width: 100px;
+	letter-spacing: 20px;
+}
+#dialog_box ul li input{
+	width: 130px;
+	height: 22px;
+}
+#dialog_box ul li input.check_btn{
+	width: 14px;
+	height: 14px;
+}
+.ensure_btn{
+	display: block;
+	width: 130px;
+	height: 30px;
+	border-radius: 5px;
+	background: #fff;
+	border: 1px solid #666;
+	margin: 16px auto 0;
+	outline: none;
+	cursor: pointer;
+}
+/*任务发放窗口*/
+#task_window ul{
+	padding: 20px;
+}
+#task_window ul li{
+	height: 60px;
+	font-size: 16px;
+	line-height: 60px;
+}
+#task_window ul li .task_tit{
+	display: inline-block;
+	width: 100px;
+}
+/*#task_window ul li input{
+	width: 180px;
+}*/
+#task_window ul li.task_time input{
+	width: 100px;
+}
+
+.combobox-item{
+    font-size: 16px!important;
+    padding: 5px;
+    cursor: pointer;
+}

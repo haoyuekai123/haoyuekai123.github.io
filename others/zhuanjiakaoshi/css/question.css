@@ -1,0 +1,303 @@
+
+/*主页面样式*/
+body{
+	width: 100%;
+	padding: 0 ;
+}
+h2{
+	line-height: 60px;
+	border-bottom: 1px solid #000;
+}
+.tool_box{
+	width: 100%;
+	padding: 16px 0;
+	position: relative;
+}
+.tool_box label{
+	margin-left: 50px;
+}
+.tool_box label input{
+	width: 120px;
+	height: 20px;
+}
+.tool_box button{
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 16px;
+	width: 100px;
+	height: 24px;
+	border-radius: 5px;
+	background: #fff;
+	border: 1px solid #666;
+	font-size: 18px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.tool_box button.add_btn{
+	margin-right: 150px;
+}
+.user_list{
+	width: 100%;
+}
+.user_list_title li,.user_list li{
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	overflow: hidden;
+}
+.user_list li span,.user_list_title li span{
+	display: block;
+	float: left;
+}
+.list_title{
+	background: #ccc;
+}
+.list_title span{
+	border-right: 2px solid #fff;
+}
+.list_title span:last-child{
+	border: none;
+}
+.list_num{
+	width: 8%;
+}
+.list_name{
+	width: 21%;
+}
+.list_type{
+	width: 10%;
+}
+.list_teacher{
+	width: 10%;
+}
+.list_state{
+	width: 10%;
+}
+.list_total_score{
+	width: 10%;
+}
+.list_time{
+	width: 17%;
+}
+.list_edit{
+	width: 14%;
+}
+#pp{
+	width: 100%;
+	margin: 40px auto 0;
+}
+
+/*录入和修改试题窗口样式*/
+.paper_info_list{
+	width: 100%;
+	padding: 20px;
+}
+.paper_info_list li{
+	line-height: 46px;
+	font-size: 16px;
+	position: relative;
+}
+.paper_info_list li .paper_info_list_title{
+	display: inline-block;
+	width: 120px;
+	text-indent: 20px;
+}
+.paper_info_note{
+	width: 200px;
+	max-width: 200px;
+	height: 80px;
+	position: absolute;
+	left: 120px;
+	top: 10px;
+}
+.mar_left{
+	margin-left: 230px;
+}
+#enter_paper_ensure{
+	display: block;
+	margin: 80px auto 0;
+	width: 120px;
+	height: 36px;
+	background: #fff;
+	outline: none;
+	border: 0;
+	border-radius: 3px;
+}
+#enter_paper_ensure2,#enter_paper_ensure3{
+	display: block;
+	margin: 80px 80px 0;
+	/*width: 120px;*/
+	height: 36px;
+	background: #fff;
+	outline: none;
+	border: 0;
+	border-radius: 3px;
+}
+.enter_objective_item_info,.enter_subjective_item_info{
+	width: 100%;
+	border-bottom: 1px dashed #666;
+	padding: 10px 20px;
+	font-size: 16px;
+}
+.enter_objective_item_info p,.enter_subjective_item_info p{
+	line-height: 50px;
+}
+.enter_objective_item_info p input,.enter_subjective_item_info p input{
+	width: 80px;
+	border-radius: 5px;
+	font-size: 16px;
+	text-align: center;
+}
+.upload_btn{
+	display: inline-block;
+	width: 80px;
+	height: 22px;
+	font-size: 16px;
+	line-height: 22px;
+	border: 1px solid #999;
+	text-align: center;
+	background: #EDEDED;
+	border-radius: 3px;
+}
+.radio_item,.cheched_item,.subject_item{
+	width: 100%;
+	padding: 10px 20px;
+}
+.radio_item li,.cheched_item li,.subject_item li{
+	line-height: 50px;
+}
+.radio_item li input[type=text],.cheched_item li input[type=text],.subject_item li input[type=text]{
+	width: 360px;
+	height: 22px;
+}
+.radio_item li a,.cheched_item li a,.subject_item li a{
+	color: #f00;
+}
+.hide{
+	display: none;
+}
+
+#add_type_window div{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+}
+#add_type_window div span{
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+}
+#add_type_window div input{
+	width: 160px;
+	height: 18px;
+	border: 1px solid #999;
+	outline: none;
+	border-radius: 2px;
+}
+.add_type_btn{
+	display: block;
+	width: 80px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	margin: 20px auto 0;
+	background: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.panel-header.accordion-header{
+	height: 27px!important;
+}
+
+
+
+
+
+
+
+
+/*按钮*/
+.a_demo_four {
+	background-color:#3bb3e0;
+	font-family: 'Open Sans', sans-serif;
+	font-size:12px;
+	text-decoration:none;
+	color:#fff;
+	position:relative;
+	padding:10px 20px;
+	padding-right:50px;
+	background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(44,160,202)),
+	color-stop(1, rgb(62,184,229))
+	);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+	-o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+	box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+}
+
+.a_demo_four:active {
+	top:3px;
+	background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(62,184,229)),
+	color-stop(1, rgb(44,160,202))
+	);
+	-webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+	-moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+	-o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+	box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+}
+
+.a_demo_four::before {
+	background-color:#2591b4;
+	background-image:url(../images/right_arrow.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	content:"";
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:15px;
+	top:50%;
+	margin-top:-9px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+	-moz-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+	-o-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+	box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+}
+
+.a_demo_four:active::before {
+	top:50%;
+	margin-top:-12px;
+	-webkit-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+	-moz-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+	-o-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+	box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+}

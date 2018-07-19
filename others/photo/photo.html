@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转相册</title>
+    <style type="text/css">
+        @keyframes rotate1 {
+            0%{
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            50%{
+                transform: rotateX(10deg) rotateY(180deg);
+            }
+            100%{
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+        .photo{
+            width:350px;
+            height:525px;
+            margin:200px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            animation: rotate1 10s linear 0s infinite;
+        }
+        .photo div{
+            width:100%;
+            height:100%;
+            position: absolute;
+            left:0;
+            top:0;
+            perspective: 200000px;
+        }
+        .photo div img{
+            width:175px;
+            hei-ght:262px;
+            display: block;
+        }
+        .photo div img:hover{
+            width:250px;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".photo>div").each(function(i){
+                $(this).css({
+                    transform:"rotateY("+(30*i)+"deg) translateZ(600px)"
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="photo">
+    <div><img src="img/1.jpg" alt=""></div>
+    <div><img src="img/2.jpg" alt=""></div>
+    <div><img src="img/3.jpg" alt=""></div>
+    <div><img src="img/4.jpg" alt=""></div>
+    <div><img src="img/5.jpg" alt=""></div>
+    <div><img src="img/6.jpg" alt=""></div>
+    <div><img src="img/7.jpg" alt=""></div>
+    <div><img src="img/8.jpg" alt=""></div>
+    <div><img src="img/9.jpg" alt=""></div>
+    <div><img src="img/10.jpg" alt=""></div>
+    <div><img src="img/11.jpg" alt=""></div>
+    <div><img src="img/12.jpg" alt=""></div>
+</div>
+</body>
+</html>

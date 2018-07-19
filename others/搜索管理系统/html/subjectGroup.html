@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>专题组设置</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/subjectGroup.css"/>
+	</head>
+	<body>
+		<header>
+			<h2 title="标题">专题组设置</h2>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="remove_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">删除</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="accredit_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">用户授权</a>
+				</div>
+				<div class="tit_right">
+					<label>专题组名： <input type="text" /></label>
+					<label>说明： <input type="text" /></label>
+					<a id="add_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-add'">添加</a>
+				</div>
+			</div>
+			<ul class="list_title">
+				<li>
+					<span class="group_checkbox">
+						<input type="checkbox" class="all_selection" />
+					</span>
+					<span class="group_name">专题组名称</span>
+					<span class="group_count">专题数</span>
+					<span class="group_state">说明</span>
+					<span class="group_edit">操作</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--load-->
+				<!--start-->
+				<li>
+					<span class="group_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="group_name">博客</span>
+					<span class="group_count">4</span>
+					<span class="group_state">博客分组的说明</span>
+					<span class="group_edit">
+						<a href="javascript:void(0);" class="easyui-linkbutton group_edit_btn" data-options="iconCls:'icon-edit'">编辑</a>
+					</span>
+				</li>
+				<!--end-->
+				<li>
+					<span class="group_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="group_name">电子刊报</span>
+					<span class="group_count">4</span>
+					<span class="group_state">电子刊报分组的说明</span>
+					<span class="group_edit">
+						<a href="javascript:void(0);" class="easyui-linkbutton group_edit_btn" data-options="iconCls:'icon-edit'">编辑</a>
+					</span>
+				</li>
+				<li>
+					<span class="group_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="group_name">论坛</span>
+					<span class="group_count">4</span>
+					<span class="group_state">论坛分组的说明</span>
+					<span class="group_edit">
+						<a href="javascript:void(0);" class="easyui-linkbutton group_edit_btn" data-options="iconCls:'icon-edit'">编辑</a>
+					</span>
+				</li>
+				<li>
+					<span class="group_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="group_name">配置信息源专用</span>
+					<span class="group_count">4</span>
+					<span class="group_state">配置信息源专用分组的说明</span>
+					<span class="group_edit">
+						<a href="javascript:void(0);" class="easyui-linkbutton group_edit_btn" data-options="iconCls:'icon-edit'">编辑</a>
+					</span>
+				</li>
+			</ul>
+			
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/subjectGroup.js"></script>
+	</body>
+</html>

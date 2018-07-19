@@ -1,0 +1,50 @@
+@charset "utf-8";
+body{
+	background: #fff;
+	width: 100%;
+	min-width: 1200px;
+}
+header{
+	width: 100%;
+	padding-left: 60px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/40x40?text=设置");
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+section .title{
+	width: 100%;
+	height: 35px;
+	padding: 5px 20px;
+	font-size: 14px;
+	background: linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -o-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -ms-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -moz-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+	background: -webkit-linear-gradient(top , rgb(215, 232, 255) 24% , rgb(183, 200, 225) 52% , rgb(122, 172, 216) 78%);
+}
+.title .tit_left{
+	float: left;
+}
+.title .tit_right{
+	float: right;
+}
+.title .tit_right input{
+	width: 100px;
+	height: 24px;
+	line-height: 22px;
+	border-radius: 3px;
+}
+
+
+
+
+
+
+

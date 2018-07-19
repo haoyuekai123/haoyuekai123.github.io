@@ -1,0 +1,88 @@
+@charset "utf-8";
+html{
+	height: 100%;
+}
+body{
+	background: #fff;
+	width: 100%;
+	min-width: 1200px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+header{
+	width: 100%;
+	padding-left: 60px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/40x40?text=设置");
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	height: 50px;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+section{
+	flex: 1;
+	width: 100%;
+	padding-top: 10px;
+}
+.tabs{
+	padding-top: 0!important;
+}
+.tabs-title{
+	display: block;
+	word-break: break-all;
+	white-space: normal;
+	font-size: 14px;
+	line-height: 16px!important;
+	padding-top: 5px;
+}
+.introduce{
+	line-height: 24px;
+	padding-left: 10px;
+	background: #f6f6ff;
+	border-top: 1px solid #EAEAFF;
+}
+#main ul li{
+	width: 100%;
+	line-height: 36px;
+	border-bottom: 2px solid #f6f6f6;
+	padding-left: 10px;
+}
+.list_title{
+	padding-top: 10px;
+}
+.list_title li{
+	background: rgb(233, 241, 251);
+	color: #0081C2;
+}
+#main ul li span{
+	display: inline-block;
+}
+.type{
+	width: 15%;
+}
+.name{
+	width: 20%;
+}
+.detail{
+	width: 50%;
+}
+.edit{
+	width: 15%;
+}
+.name2{
+	width: 25%;
+}
+.list{
+	width: 30%;
+}
+.edit2{
+	width: 15%;
+}
+
+

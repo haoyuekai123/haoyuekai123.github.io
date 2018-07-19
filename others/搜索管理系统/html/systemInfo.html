@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>系统信息</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+    	<link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	    <script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/systemInfo.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>系统信息</h2>
+		</header>
+		<section>
+			<div id="main" class="easyui-tabs">
+			    <div title="产品信息" style="display:none;">
+					<div class="tools">
+						<a id="reload" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>	
+					</div>
+					<ul class="item">
+						<li class="item_title">服务状态</li>
+						<li>
+							<sapn class="item_name">服务器：</sapn>
+							<span id="server">WIN-NOCP99IDTBB</span>
+						</li>
+						<li>
+							<sapn class="item_name">服务状态：</sapn>
+							<span id="serve_state">运行中</span>
+						</li>
+						<li>
+							<sapn class="item_name">下载超时时间：</sapn>
+							<span id="download_time">90秒</span>
+						</li>
+						<li>
+							<sapn class="item_name">自动分类：</sapn>
+							<span id="sort">启用</span>
+						</li>
+						<li>
+							<sapn class="item_name">记录更新模式：</sapn>
+							<span id="updata_moudle">不更新已收录的记录，只收集新纪录</span>
+						</li>
+						<li>
+							<sapn class="item_name">搜集线程数目</sapn>
+							<span id="select_count">20</span>
+						</li>
+					</ul>
+					<ul class="item">
+						<li class="item_title">信息搜集服务</li>
+						<li>
+							<sapn class="item_name">当前搜集速度：</sapn>
+							<span id="select_speed">7记录/分钟</span>
+						</li>
+						<li>
+							<sapn class="item_name">今日搜集记录数：</sapn>
+							<span id="today_record">44197</span>
+						</li>
+						<li>
+							<sapn class="item_name">累计搜集记录数：</sapn>
+							<span id="total_record">1471108</span>
+						</li>
+						<li>
+							<sapn class="item_name">今日搜集出错记录数：</sapn>
+							<span id="wrong_record">0</span>
+						</li>
+					</ul>
+					<ul class="item">
+						<li class="item_title">系统资源状况</li>
+						<li>
+							<sapn class="item_name">CPU占用：</sapn>
+							<span id="CPU">17%</span>
+						</li>
+						<li>
+							<sapn class="item_name">进程内存占用：</sapn>
+							<span id="RAM">337.1MB</span>
+						</li>
+						<li>
+							<sapn class="item_name">平均磁盘队列长度：</sapn>
+							<span id="disk_queue">3.283</span>
+						</li>
+					</ul>
+					<ul class="item">
+						<li class="item_title">网络带宽占用</li>
+						<li>
+							<sapn class="item_name">122.49.22.149（传入）：</sapn>
+							<span id="CPU">237.02KB</span>
+						</li>
+						<li>
+							<sapn class="item_name">122.49.22.149（传出）：</sapn>
+							<span id="RAM">83.39KB</span>
+						</li>
+					</ul>
+			    </div>
+			    <div title="信息搜集" style="display:none;">
+					<div class="tools">
+						<a id="reload" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>	
+					</div>
+					<ul class="item">
+						<li class="item_title">产品信息</li>
+						<li>
+							<sapn class="item_name">管理系统版本：</sapn>
+							<span id="edition">公众舆情专业搜索软件 v 1.0</span>
+						</li>
+						<li>
+							<sapn class="item_name">管理服务器：</sapn>
+							<span id="management_server">WIN-NOCP99IDTBB</span>
+						</li>
+						<li>
+							<sapn class="item_name">自动分类组件：</sapn>
+							<span id="sort_element">已安装</span>
+						</li>
+						<li>
+							<sapn class="item_name">通用数据库接口组件：</sapn>
+							<span id="connector">未安装</span>
+						</li>
+						<li>
+							<sapn class="item_name">词库管理组件：</sapn>
+							<span id="words">未安装</span>
+						</li>
+						<li>
+							<sapn class="item_name">系统数据库：</sapn>
+							<span id="database">（local）IFACE</span>
+						</li>
+					</ul>
+			    </div>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/systemInfo.js"></script>
+	</body>
+</html>

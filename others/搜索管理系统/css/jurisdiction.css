@@ -1,0 +1,58 @@
+@charset "utf-8";
+body{
+	background: #fff;
+	width: 100%;
+	min-width: 1200px;
+}
+header{
+	width: 100%;
+	padding-left: 60px;
+	margin-bottom: 5px;
+	background-image: url("http://usr.im/40x40?text=设置");
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+header h2{
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 700;
+}
+section{
+	padding-top: 5px;
+}
+section ul li{
+	width: 100%;
+	line-height: 36px;
+	border-bottom: 2px solid #f6f6f6;
+	padding-left: 20px;
+}
+.list_title li{
+	background: rgb(233, 241, 251);
+	color: #0081C2;
+}
+section ul li span{
+	display: inline-block;
+}
+.type{
+	width: 10%;
+}
+.jur_name{
+	width: 20%;
+}
+.role{
+	width: 15%;
+}
+.user{
+	width: 15%;
+}
+.note{
+	width: 39%;
+}
+
+
+
+
+
+
+

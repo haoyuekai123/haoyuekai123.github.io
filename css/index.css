@@ -1,0 +1,215 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	background: url(../images/bg.jpg) no-repeat;
+	background-color: #f3ece4;
+	min-height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+div.nav{
+	position: relative;
+	height: 900px;
+}
+div.navItem{
+	position: absolute;
+	background-size: contain;
+	cursor: pointer;
+}
+.nav1{
+	width: 378px;
+	height: 144px;
+	background: url(../images/nav1.png) no-repeat;
+	left: 240px;
+	top: 70px;
+}
+.nav2{
+	width: 306px;
+	height: 126px;
+	background: url(../images/nav2.png) no-repeat;
+	left: 10px;
+	top: 215px;
+}
+.nav3{
+	width: 324px;
+	height: 132px;
+	background: url(../images/nav3.png) no-repeat;
+	left: 300px;
+	top: 340px;
+}
+.nav4{
+	width: 246px;
+	height: 126px;
+	background: url(../images/nav4.png) no-repeat;
+	left: 30px;
+	top: 470px;
+}
+.nav5{
+	width: 330px;
+	height: 123px;
+	background: url(../images/nav5.png) no-repeat;
+	left: 270px;
+	top: 590px;
+}
+div.menu{
+	position: absolute;
+	width: 500px;
+	height: 13px;
+	left: 630px;
+	top: 15px;
+	padding-top: 148px;
+	padding-bottom: 63px;
+}
+.menuTop{
+	width: 500px;
+	height: 155px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../images/menuTop.png);
+	z-index: 11;
+}
+.menuBottom{
+	width: 500px;
+	height: 70px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(../images/menuBottom.png);
+	z-index: 11;
+}
+div.img{
+	width: 417px;
+	height: 59px;
+	background: url(../images/img.png) repeat -33px 0;
+	position: absolute;
+	left: 41px;
+	top: 5px;
+}
+
+.menuMain{
+	background: url(../images/menuMain.png);
+	width: 366px;
+	height: 100%;
+	margin: 0 auto;
+	box-shadow: 0px 0px 100px #000;/*金色： #f3eb00*/
+	padding: 0 26px;
+	overflow: hidden;
+}
+.menuMain li{
+	list-style: none;
+	line-height: 44px;
+	margin-bottom: 2px;
+	background: rgba(10,52,44,.2);
+	font-size: 24px;
+	color: #e61b1c;
+	cursor: pointer;
+	padding-left: 10px;
+	width: calc(100% - 10px);
+	font-family: inherit;
+}
+.menuMain li:hover{
+	font-size: 28px;
+}
+.menuMain li:first-child{
+	animation-delay: -0.3s;
+}
+.menuMain li:nth-child(2){
+	animation-delay: 0s;
+}
+.menuMain li:nth-child(3){
+	animation-delay: 0.3s;
+}
+.menuMain li:nth-child(4){
+	animation-delay: 0.6s;
+}
+.menuMain li:nth-child(5){
+	animation-delay: 0.9s;
+}
+.menuMain li:nth-child(6){
+	animation-delay: 1.2s;
+}
+.menuMain li:nth-child(7){
+	animation-delay: 1.5s;
+}
+.menuMain li:nth-child(8){
+	animation-delay: 1.8s;
+}
+.menuMain li:nth-child(9){
+	animation-delay: 2.1s;
+}
+.menuMain li:nth-child(10){
+	animation-delay: 2.4s;
+}
+.menuMain li a{
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
+	text-decoration: none;
+}
+@keyframes open{
+	from{
+		height: 13px;
+	}
+	to{
+		height: 680px;
+	}
+}
+@keyframes close{
+	from{
+		height: 680px;
+	}
+	to{
+		height: 13px;
+	}
+}
+@keyframes open2{
+	from{
+		background-position-x: -33px;
+	}
+	to{
+		background-position-x: 0px;
+	}
+}
+@keyframes close2{
+	from{
+		background-position-x: 0px;
+	}
+	to{
+		background-position-x: -33px;
+	}
+}
+div.menu.open{
+	animation: open 2s linear 1 forwards;
+}
+div.menu.close{
+	animation: close 2s linear 1 forwards;
+}
+.menuBottom .img.open{
+	animation: open2 2s linear 1 forwards;
+}
+.menuBottom .img.close{
+	animation: close2 2s linear 1 forwards;
+}
+.share{
+	position: fixed;
+	right: 30px;
+	top: 0px;
+}
+
+.beianNumber{
+	width: 100%;
+	background: #333;
+	font-size: 12px;
+	text-align: center;
+	height: 30px;
+	color: #fff;
+	line-height: 30px;
+	margin-top: 30px;
+}

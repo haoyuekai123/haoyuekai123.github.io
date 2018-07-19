@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+body{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+body #main{
+	display: flex;
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	height: 100%;
+	flex-direction: column;
+	position: relative;
+}
+#main.moveLeft{
+	animation: moveLeft .5s ease 1 forwards;
+}
+@keyframes moveLeft{
+	from{left:80%}
+	to{left:0}
+}
+#main.moveRight{
+	animation: moveRight .5s ease 1 forwards;
+}
+@keyframes moveRight{
+	from{left:0}
+	to{left:80%}
+}
+#mask{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 9999;
+	display: none;
+}
+header{
+	width: 100%;
+	height: 60px;
+	background: #dedffb;
+	display: flex;
+}
+header span{
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: relative;
+}
+header img{
+	display: block;
+	width: 80%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 50%;
+}
+header h2{
+	flex: 1;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	letter-spacing: 12px;
+	font-size: 28px;
+	font-weight: 400;
+}
+section{
+	flex: 1;
+	background: #fff;
+	overflow: auto;
+}
+footer{
+	height: 60px;
+	width: 100%;
+	background: #fff;
+	display: flex;
+}
+footer .item{
+	display: block;
+	flex: 1;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+}
+footer .item img{
+	display: block;
+	width: 24px;
+	margin: 6px auto;
+}
+footer .item span{
+	display: block;
+	width: 100%;
+	line-height: 24px;
+	text-align: center;
+	font-size: 16px;
+	color: #1296db;
+}
+section .main{
+	
+}
+section .main li{
+	list-style: none;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 10px;
+	background: #f0f0f0;
+	position: relative;
+}
+section .main li img{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	position: absolute;
+	left: 7px;
+	top: 7px;
+}
+section .main li span{
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	box-sizing: border-box;
+	padding: 0 10px 0 60px;
+}
+
+
+#leftNav{
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	left: -20%;
+	top: 0;
+	z-index: -1;
+	background: #f00;
+}
+
+
+
+/*滚动条*/
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: rgba(25, 147, 147, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(25, 147, 147, 0.2);
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>专题管理</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/subjectAdmin.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>专题管理</h2>
+			<p>定义和管理信息搜集的各个专题。通常，您可将要搜集的的同一类信息放在一个专题中。常见的专题包括体育、财经、娱乐等，您完全可根据需求自由定义。每个专题可以包含来自不同网址的多个信息源。此外，利用全文检索功能还可以按这些专题来限定查找范围。</p>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<span class="tit_txt">专题组</span>
+					<input id="task_force" name="task_force" value="全部">
+				</div>
+				<div class="tit_center">
+					<a id="create_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-add'">创建</a>&nbsp;&nbsp;&nbsp;
+					<a id="remove_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">删除</a>&nbsp;&nbsp;&nbsp;
+					<a id="reload_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>
+				</div>
+				<div class="tit_right">
+					<span class="tit_txt">专题名称</span>
+					<input type="text" id="search_txt" />
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<ul class="list_title">
+				<li>
+					<span class="list_checkbox">
+						<input type="checkbox" class="all_selection" />
+					</span>
+					<span class="list_num">专题号</span>
+					<span class="list_name">专题名称</span>
+					<span class="list_group">专题组</span>
+					<span class="list_save">保存到</span>
+					<span class="list_sort">自动分类</span>
+					<span class="list_timing">时限（天）</span>
+					<span class="list_validity">有效期（天）</span>
+					<span class="list_change">修改时间</span>
+					<span class="list_standard">标准分类</span>
+					<span class="list_count1">信息源数</span>
+					<span class="list_count2">记录数</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--load-->
+				<!--start-->
+				<li>
+					<span class="list_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="list_num">1</span>
+					<span class="list_name">钢铁行业新闻</span>
+					<span class="list_group">新闻</span>
+					<span class="list_save">数据库</span>
+					<span class="list_sort">对勾</span>
+					<span class="list_timing">7</span>
+					<span class="list_validity">7</span>
+					<span class="list_change">2016-12-8 13:43:21</span>
+					<span class="list_standard">2</span>
+					<span class="list_count1">68</span>
+					<span class="list_count2">14135</span>
+				</li>
+				<li>
+					<span class="list_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="list_num">2</span>
+					<span class="list_name">微博</span>
+					<span class="list_group">微博</span>
+					<span class="list_save">数据库</span>
+					<span class="list_sort">对勾</span>
+					<span class="list_timing">7</span>
+					<span class="list_validity">7</span>
+					<span class="list_change">2016-12-8 13:43:21</span>
+					<span class="list_standard">2</span>
+					<span class="list_count1">68</span>
+					<span class="list_count2">14135</span>
+				</li>
+				<li>
+					<span class="list_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="list_num">3</span>
+					<span class="list_name">信息源维护</span>
+					<span class="list_group">配置信息源专用</span>
+					<span class="list_save">数据库</span>
+					<span class="list_sort">对勾</span>
+					<span class="list_timing">7</span>
+					<span class="list_validity">7</span>
+					<span class="list_change">2016-12-8 13:43:21</span>
+					<span class="list_standard">2</span>
+					<span class="list_count1">68</span>
+					<span class="list_count2">14135</span>
+				</li>
+				<!--end-->
+			</ul>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/subjectAdmin.js"></script>
+	</body>
+</html>

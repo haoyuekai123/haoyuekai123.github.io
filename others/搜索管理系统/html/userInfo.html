@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户信息源统计</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/userInfo.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>统计：用户信息源统计</h2>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="reload_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="itemBtn on">用户信息源统计</span> | <span class="itemBtn">用户信息源数排序</span>
+				</div>
+				<div class="tit_right">
+					<label>用户名： <input type="text" id="user" /></label>
+					<label>姓名： <input type="text" id="name" /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<ul class="list_title">
+				<li>
+					<span class="user">设置用户</span
+					><span class="name">姓名</span
+					><span class="time">注册日期</span
+					><span class="sub">可访问专题数</span
+					><span class="cInfo">创建信息源数</span
+					><span class="sInfo">设置信息源数</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--list start-->
+				<li>
+					<span class="user">test</span>
+					<span class="name">证券测试</span>
+					<span class="time">2013-9-24 12:24:36</span>
+					<span class="sub">14</span>
+					<span class="cInfo">50</span>
+					<span class="sInfo">27</span>
+				</li>
+				<!--list end-->
+			</ul>
+			<!--分页-->
+			<div id="pp"></div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/userInfo.js"></script>
+	</body>
+</html>

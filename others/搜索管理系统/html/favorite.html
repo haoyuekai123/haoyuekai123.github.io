@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网站收藏夹</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/favorite.css"/>
+		
+	</head>
+	<body>
+		<header>
+			<h2>网站收藏夹</h2>
+			<p>收藏夹记录系统收集信息的目标网站</p>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="reload_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="setman_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-man'">设置人</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="derive_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-print'">导出</a>
+				</div>
+				<div class="tit_right">
+					<label>网站名称： <input type="text" id="search_name" /></label>
+					<label>网址： <input type="text" id="search_address" /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<p class="search_prompt">符合条件的网站共有 <span id="search_count">1</span> 个</p>
+			<ul class="list_title">
+				<li>
+					<span class="net_checkbox">
+						<input type="checkbox" class="all_selection" />
+					</span>
+					<span class="net_name">网站名称</span>
+					<span class="net_address">网址</span>
+					<span class="net_sub">专题数</span>
+					<span class="net_info">信息数</span>
+					<span class="net_realm">域名</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--load-->
+				<!--start-->
+				<li>
+					<span class="net_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="net_name"><a href="//www.chuban.cc" target="_blank">中国出版网</a></span>
+					<span class="net_address"><a href="//www.chuban.cc" target="_blank">www.chuban.cc</a></span>
+					<span class="net_sub"><a href="#" target="_self">26</a></span>
+					<span class="net_info"><a href="#" target="_self">26</a></span>
+					<span class="net_realm">chuban.cc</span>
+				</li>
+				<!--end-->
+				<li>
+					<span class="net_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="net_name"><a href="//www.chuban.cc" target="_blank">中国出版网</a></span>
+					<span class="net_address"><a href="//www.chuban.cc" target="_blank">www.chuban.cc</a></span>
+					<span class="net_sub"><a href="#" target="_self">26</a></span>
+					<span class="net_info"><a href="#" target="_self">26</a></span>
+					<span class="net_realm">chuban.cc</span>
+				</li>
+				<li>
+					<span class="net_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="net_name"><a href="//www.chuban.cc" target="_blank">中国出版网</a></span>
+					<span class="net_address"><a href="//www.chuban.cc" target="_blank">www.chuban.cc</a></span>
+					<span class="net_sub"><a href="#" target="_self">26</a></span>
+					<span class="net_info"><a href="#" target="_self">26</a></span>
+					<span class="net_realm">chuban.cc</span>
+				</li>
+			</ul>
+			<!--分页-->
+			<div id="pp"></div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/favorite.js"></script>
+	</body>
+</html>

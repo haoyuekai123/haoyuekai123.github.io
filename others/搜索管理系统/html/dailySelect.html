@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>每日搜集记录数</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+    	<link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css"/>
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	    <script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/dailySelect.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>统计：每日搜集记录数</h2>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="reload_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>
+				</div>
+				<div class="tit_right">
+					<label>统计频度： <input type="text" id="frequency" /></label>
+					<label>开始时间： <input type="text" id="startTime" readonly /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<div class="main easyui-tabs" id="tt">
+				<div title="记录增长统计" style="padding: 10px 20px;display: none;">
+					指定的时间范围内没有搜集到网页
+			    </div>
+			    <div title="记录时间分布" style="padding: 10px 20px;display: none;">
+					指定的时间范围内没有搜集到网页
+			    </div>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/dailySelect.js"></script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>分类管理</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/sortManagement.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>分类管理</h2>
+			<p>自定义分类标准。系统在信息搜集是，会根据每个专题使用的分类标准，对保存的记录进行自动分类。</p>
+		</header>
+		<section>
+			<div class="title">
+				<div class="tit_left">
+					<a id="create_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-add'">创建</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="remove_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">删除</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="reload_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">刷新</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="derive_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-redo'">导入</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a id="import_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-undo'">导出</a>
+				</div>
+				<div class="tit_right">
+					<label>分类标准名： <input type="text" id="search_name" /></label>
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+			</div>
+			<ul class="list_title">
+				<li>
+					<span class="sort_checkbox">
+						<input type="checkbox" class="all_selection" />
+					</span
+					><span class="sort_num">分类标准号</span
+					><span class="sort_name">分类标准名</span
+					><span class="updata_time">更新时间</span
+					><span class="sort_edit">编辑</span
+					><span class="sort_note">注释</span
+					><span class="sub_count">专题数</span>
+				</li>
+			</ul>
+			<ul class="list_cont">
+				<!--load-->
+				<!--start-->
+				<li>
+					<span class="sort_checkbox">
+						<input type="checkbox" class="single_selection" />
+					</span>
+					<span class="sort_num">193</span>
+					<span class="sort_name">省市</span>
+					<span class="updata_time">2013/5/20 17:28:46</span>
+					<span class="sort_edit">
+						<i class="edit_btn"></i>
+					</span>
+					<span class="sort_note">中国省/省辖市级分类标准</span>
+					<span class="sub_count">66</span>
+				</li>
+				<!--end-->
+			</ul>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/sortManagement.js"></script>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>评卷教师管理</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css">
+	    <link rel="stylesheet" type="text/css" href="../js/themes/icon.css">
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="../jedate/jquery.jedate.js"></script>
+		<link type="text/css" rel="stylesheet" href="../jedate/skin/jedate.css">
+	    <!--my css-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/teacher.css"/>
+		
+	</head>
+	<body>
+		<h2>用户管理</h2>
+		<div class="tool_box">
+			<label>姓名 <input type="text" class="search_name" /></label>
+			<label>电话 <input type="text" class="search_tel" /></label>
+			<button class="add_btn">添加</button>
+			<button class="set_btn">评卷任务设置</button>
+			<button class="search_btn">搜索</button>
+		</div>
+		<ul class="user_list_title">
+			<li class="list_title">
+				<span class="list_num">序号</span>
+				<span class="list_name">姓名</span>
+				<span class="list_position">职位</span>
+				<span class="list_tel">电话</span>
+				<span class="list_IP">最后登录IP</span>
+				<span class="list_account">账号</span>
+				<span class="list_pwd">密码</span>
+				<span class="list_state">状态</span>
+				<span class="list_edit">操作</span>
+			</li>
+		</ul>
+		<ul class="user_list">
+			<li class="list_cont">
+				<span class="list_num">1</span>
+				<span class="list_name">李建勇</span>
+				<span class="list_position">校长</span>
+				<span class="list_tel">13526482458</span>
+				<span class="list_IP">192.168.1.1</span>
+				<span class="list_account">5843928196</span>
+				<span class="list_pwd">123456</span>
+				<span class="list_state">评卷中</span>
+				<span class="list_edit">
+					<button class="edit_btn">编辑</button>
+					<button class="forbidden_btn">禁用</button>
+					<button class="remove_btn">删除</button>
+				</span>
+			</li>
+			<li class="list_cont">
+				<span class="list_num">1</span>
+				<span class="list_name">李建勇</span>
+				<span class="list_position">校长</span>
+				<span class="list_tel">13526482458</span>
+				<span class="list_IP">192.168.1.1</span>
+				<span class="list_account">5843928196</span>
+				<span class="list_pwd">123456</span>
+				<span class="list_state">评卷中</span>
+				<span class="list_edit">
+					<button class="edit_btn">编辑</button>
+					<button class="forbidden_btn">禁用</button>
+					<button class="remove_btn">删除</button>
+				</span>
+			</li>
+			<li class="list_cont">
+				<span class="list_num">1</span>
+				<span class="list_name">李建勇</span>
+				<span class="list_position">校长</span>
+				<span class="list_tel">13526482458</span>
+				<span class="list_IP">192.168.1.1</span>
+				<span class="list_account">5843928196</span>
+				<span class="list_pwd">123456</span>
+				<span class="list_state">评卷中</span>
+				<span class="list_edit">
+					<button class="edit_btn">编辑</button>
+					<button class="forbidden_btn">禁用</button>
+					<button class="remove_btn">删除</button>
+				</span>
+			</li>
+		</ul>
+		<!--添加/编辑弹窗-->
+		<div id="dialog_box" style="display: none;">
+	        <ul>
+	        	<li>
+	        		<span>姓名</span><input type="text" class="edit_name" value="" />
+	        	</li>
+	        	<li>
+	        		<span>职位</span><input type="text" class="edit_position" value="" />
+	        	</li>
+	        	<li>
+	        		<span>手机</span><input type="text" class="edit_tel" value="" />
+	        	</li>
+	        	<li>
+	        		<span>工号</span><input type="text" class="edit_job_num" value="" />
+	        	</li>
+	        	<li>
+	        		<span>账号</span><input type="text" class="edit_account" value="" />
+	        	</li>
+	        	<li>
+	        		<span>密码</span><input type="text" class="edit_pwd" value="" />
+	        		<label><input class="check_btn" type="checkbox" />默认密码</label>
+	        	</li>
+	        </ul>
+	        <button class="ensure_btn">确定</button>
+	    </div>
+	    <!--评卷任务发放窗口-->
+	    <div id="task_window" style="display: none;">
+	    	<ul>
+	    		<li>
+	    			<span class="task_tit">选择试卷</span>
+	    			<input id="task_paper" value="" style="width:160px;height: 26px;font-size: 16px;" />
+	    		</li>
+	    		<li>
+	    			<span class="task_tit">选择教师</span>
+	    			<input id="task_teacher" type="text" value="" style="width:160px;height: 26px;font-size: 16px;" />
+	    		</li>
+	    		<li>
+	    			<span class="task_tit">负责评审任务</span>
+	    			<input id="task_item" type="text" value="" style="width:160px;height: 26px;font-size: 16px;" />
+	    		</li>
+	    		<li class="task_time">
+	    			<span class="task_tit">评卷时间</span>
+	    			<input type="text" class="search_exam_card" id="task_start_time" type="text" placeholder="选择开始时间" value=""  readonly /> -
+					<input type="text" class="search_exam_card" id="task_end_time" type="text" placeholder="选择结束时间" value=""  readonly />
+	    		</li>
+	    	</ul>
+	    	<button id="task_add_btn" style="display: block;margin: 20px auto 0;">添加</button>
+	    </div>
+		<!--分页-->
+		<div id="pp"></div>
+    	
+    	<!--my js-->
+    	<script src="../js/teacher.js"></script>
+    	
+	</body>
+</html>

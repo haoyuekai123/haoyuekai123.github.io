@@ -1,0 +1,61 @@
+
+body{
+	width: 100%;
+}
+.clear{
+	width: 100%;
+	height: 0;
+	clear: both;
+}
+.data_list{
+	width: 50%;
+	float: left;
+	padding-left: 45px;
+}
+h2{
+	line-height: 60px;
+	border-bottom: 1px solid #000;
+	width: 100%;
+}
+.data_list li{
+	width: 100%;
+	height: 52px;
+	line-height: 22px;
+	font-size: 20px;
+	padding: 15px 0;
+	border-bottom: 1px dashed #333;
+}
+.data_list li.noBor{
+	border: none;
+}
+.data_list li span{
+	display: block;
+	width: 50%;
+	float: left;
+	position: relative;
+	text-indent: 50px;
+}
+.data_list li span i{
+	position: absolute;
+	right: 0px;
+	color: #00f;
+	font-weight: bold;
+	cursor: pointer;
+}
+.data_list li span i:hover{
+	text-decoration: underline;
+}
+.data_list li span:first-child{
+	border-right: 1px solid #333;
+	text-indent: 0;
+}
+.data_list li span:first-child i{
+	right: 50px;
+}
+.img_box{
+	width: 45%;
+	float: right;
+}
+.img_box img{
+	width: 100%;
+}

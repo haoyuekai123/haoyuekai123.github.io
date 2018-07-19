@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>信息源管理</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+    	<link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/infoOrigin.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>信息源管理</h2>
+		</header>
+		<section class="clear">
+			<div class="left">
+				<div class="title item_box">
+					<span class="on" id="net">网站</span>
+					<span id="sub">专题</span>
+				</div>
+				<div class="search">
+					<input type="text" id="search_input" />
+					<a id="search_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+				<ul class="left_nav">
+					<li class="on" title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+					<li title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+				</ul>
+				<ul class="left_nav hide">
+					<li class="on" title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+					<li title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+					<li title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+					<li title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+					<li title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+					<li title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+					<li title="国际融资网>每月杂志>焦点话题">国际融资网>每月杂志>焦点话题</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="title">
+					<a id="create_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-add'">创建</a>&nbsp;&nbsp;&nbsp;
+					<a id="remove_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">删除</a>&nbsp;&nbsp;&nbsp;
+					<a id="copy_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-save'">复制</a>&nbsp;&nbsp;&nbsp;
+					<a id="move_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-cut'">移动</a>&nbsp;&nbsp;&nbsp;
+					<a id="change_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-tip'">变更状态</a>&nbsp;&nbsp;&nbsp;
+					<a id="import_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-redo'">导入信息源</a>&nbsp;&nbsp;&nbsp;
+					<a id="derive_btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-undo'">导出信息源</a>
+				</div>
+				<div class="filter_box">
+					<label>信息源名称： <input type="text" id="info_name" class="bor" /></label>
+					<label>初始地址： <input type="text" id="start_address" class="bor" /></label>
+					<label>备注： <input type="text" id="info_note" class="bor" /></label>
+					<label>设置方式： <input type="text" id="info_set" /></label>
+					<span>导航深度： </span><input type="text" class="nav_height bor" id="nav_start" /> 至 <input type="text" class="nav_height bor" id="nav_end" />
+					&nbsp;&nbsp;&nbsp;<a id="search_btn2" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查找</a>
+				</div>
+				<div class="state_box clear">
+					<div class="state_left">
+						<label>符合条件的信息源共有 <span id="info_count" class="c_3B553B">10</span> 个</label>
+						<label>搜集服务状态： <span id="info_state" class="c_3B553B">运行中</span> </label>
+						<label>导出到： <input type="text" id="serive_item" /></label>
+					</div>
+					<div class="state_right">
+						<a href="javascript:void(0);" id="look_all">查看所有信息源</a>
+						<span> &nbsp;&nbsp;|&nbsp;&nbsp; </span>
+						<a href="javascript:void(0);" id="look_part">查看批处理任务</a>
+					</div>
+				</div>
+				<ul class="list_title">
+					<li>
+						<span class="net_checkbox">
+							<input type="checkbox" class="all_selection" />
+						</span>
+						<span class="info_num">编号</span>
+						<span class="info_name">名称</span>
+						<span class="info_height">深度</span>
+						<span class="info_note">备注</span>
+						<span class="info_state">状态</span>
+						<span class="info_visited">访问</span>
+						<span class="info_sub">专题</span>
+						<span class="info_time">设置时间</span>
+						<span class="info_count">记录数</span>
+						<span class="info_set">设置人</span>
+						<span class="info_research">重搜</span>
+						<span class="info_part">批处理</span>
+					</li>
+				</ul>
+				<ul class="list_cont">
+					<!--load-->
+					<!--start-->
+					<li>
+						<span class="net_checkbox">
+							<input type="checkbox" class="single_selection" />
+						</span>
+						<span class="info_num">81869</span>
+						<span class="info_name"><a href="#">国际融资网>每月杂志>焦点话题</a></span>
+						<span class="info_height">5</span>
+						<span class="info_note">信息源/专题号 77953/677</span>
+						<span class="info_state"><input type="text" class="info_state_input" /></span>
+						<span class="info_visited"><i class="">2</i></span>
+						<span class="info_sub">[新闻]门户网站</span>
+						<span class="info_time">2016-11-18 11:03:25</span>
+						<span class="info_count"><a href="#" target="_blank">2</a></span>
+						<span class="info_set">管理员</span>
+						<span class="info_research">重新搜集</span>
+						<span class="info_part">是</span>
+					</li>
+					<!--end-->
+					<li>
+						<span class="net_checkbox">
+							<input type="checkbox" class="single_selection" />
+						</span>
+						<span class="info_num">81869</span>
+						<span class="info_name"><a href="#">国际融资网>每月杂志>焦点话题</a></span>
+						<span class="info_height">5</span>
+						<span class="info_note">信息源/专题号 77953/677</span>
+						<span class="info_state"><input type="text" class="info_state_input" /></span>
+						<span class="info_visited"><i class="">2</i></span>
+						<span class="info_sub">[新闻]门户网站</span>
+						<span class="info_time">2016-11-18 11:03:25</span>
+						<span class="info_count">2</span>
+						<span class="info_set">管理员</span>
+						<span class="info_research">重新搜集</span>
+						<span class="info_part">是</span>
+					</li>
+					<li>
+						<span class="net_checkbox">
+							<input type="checkbox" class="single_selection" />
+						</span>
+						<span class="info_num">81869</span>
+						<span class="info_name"><a href="#">国际融资网>每月杂志>焦点话题</a></span>
+						<span class="info_height">5</span>
+						<span class="info_note">信息源/专题号 77953/677</span>
+						<span class="info_state"><input type="text" class="info_state_input" /></span>
+						<span class="info_visited"><i class="">2</i></span>
+						<span class="info_sub">[新闻]门户网站</span>
+						<span class="info_time">2016-11-18 11:03:25</span>
+						<span class="info_count">2</span>
+						<span class="info_set">管理员</span>
+						<span class="info_research">重新搜集</span>
+						<span class="info_part">是</span>
+					</li>
+					<li>
+						<span class="net_checkbox">
+							<input type="checkbox" class="single_selection" />
+						</span>
+						<span class="info_num">81869</span>
+						<span class="info_name"><a href="#">国际融资网>每月杂志>焦点话题</a></span>
+						<span class="info_height">5</span>
+						<span class="info_note">信息源/专题号 77953/677</span>
+						<span class="info_state"><input type="text" class="info_state_input" /></span>
+						<span class="info_visited"><i class="">2</i></span>
+						<span class="info_sub">[新闻]门户网站</span>
+						<span class="info_time">2016-11-18 11:03:25</span>
+						<span class="info_count">2</span>
+						<span class="info_set">管理员</span>
+						<span class="info_research">重新搜集</span>
+						<span class="info_part">是</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		
+		<!--my js-->
+		<script src="../js/infoOrigin.js"></script>
+	</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>专题设置</title>
+		<!--link-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link href="../css/default.css" rel="stylesheet" type="text/css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/default/easyui.css" />
+	    <link rel="stylesheet" type="text/css" href="../js/themes/icon.css" />
+	    <script type="text/javascript" src="../js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+		<!--mine-->
+		<link rel="stylesheet" type="text/css" href="../css/subDetail.css"/>
+	</head>
+	<body>
+		<header>
+			<h2>专题设置</h2>
+			<div>
+				<span>当前专题组</span>&nbsp;<i class="sub_group">全网新闻</i>
+				<span>当前专题</span>&nbsp;<i class="sub_name">全网新闻</i>
+			</div>
+		</header>
+		<section id="my_tabs" class="easyui-tabs">
+		    <div class="my_tab" title="基本信息">
+				<p class="introduce">设置专题来进行信息收集。通常可将要搜索的同一类信息放在一个专题中。常见的专题包括体育、财经、娱乐等，您完全可根据需求自由定义。每个专题可以包含来自不同网址的多个信息源。此外，利用全文检索功能还可以按这些专题来限定查找范围。</p>
+				<ul class="main">
+					<li class="clear">
+						<div class="left">
+							<h3>名称和描述</h3>
+							<p class="introduce">请键入专题的名称，并键入有助于操作员设置该专题及其信息源的说明性文字，例如专题要包括的内容、类别、范围等。</p>
+						</div>
+						<div class="right">
+							<p class="right_introduce">名称：</p>
+							<input type="text" id="right_name" />
+							<p class="right_introduce">描述：</p>
+							<textarea class="right_describe" id="right_describe"></textarea>
+							<p class="right_introduce">媒体类型：</p>
+							<input type="text" value="其他" id="media_type" />
+						</div>
+					</li>
+					<li class="clear">
+						<div class="left">
+							<h3>信息搜集模式</h3>
+							<p class="introduce">日常更新模式：系统优先更新各信息源的新纪录；初始积累模式：主要目的是累计文章数量，而不是优先反映信息源最新文章。此模式适用对信息源的全面扫描。</p>
+						</div>
+						<div class="right">
+							<p class="right_introduce">搜集模式：</p>
+							<input type="text" value="日常更新" id="collect_mode" />
+						</div>
+					</li>
+					<li class="clear">
+						<div class="left">
+							<h3>专题分组</h3>
+							<p class="introduce">指定该专题所属的专题组。提示：若专题很多，可以根据需要将他们分组，从而易于查找和管理。若不需要分组，请指定“未分组”。</p>
+						</div>
+						<div class="right">
+							<p class="right_introduce">专题组：</p>
+							<input type="text" value="全部" id="sub_group" />
+						</div>
+					</li>
+					<li class="clear">
+						<div class="left">
+							<h3>信息收集时效</h3>
+							<p class="introduce">对于时效性较强的记录，例如行情等，可以设置较短的搜集时间限制，例如7天以内。0表示不限制。</p>
+						</div>
+						<div class="right">
+							<p class="right_introduce">只搜集时间在：</p>
+							<input type="text" value="全部" id="data_limit" /><span>天内的记录</span>
+						</div>
+					</li>
+					<li class="clear">
+						<div class="left">
+							<h3>信息更新速度</h3>
+							<p class="introduce">检测频率用来指定对信息源更新进行检测的最短时间间隔，存档更新频率用来指定对以保存记录进行更改的最短时间间隔。系统会更具这些设置对信息搜集进行调整和优化。请注意：检测和更新频率太快，会加大系统负载。</p>
+						</div>
+						<div class="right">
+							<p class="right_introduce">检测频率：</p>
+							<input type="text" value="全部" id="detection_rate" /><span>分钟</span>
+							<p class="right_introduce">存档更新频率：</p>
+							<input type="text" value="全部" id="save_rate" /><span>天</span>
+						</div>
+					</li>
+					<li class="clear">
+						<div class="left">
+							<h3>自动提取设置</h3>
+							<p class="introduce">设置自动提取选项</p>
+						</div>
+						<div class="right">
+							<p class="check_item">
+								<input type="checkbox" />
+								自动识别并提取文章图片信息
+							</p>
+							<p class="check_item">
+								<input type="checkbox" />
+								下载提取的图片文件
+							</p>
+							<p class="check_item">
+								<input type="checkbox" />
+								自动识别并提取文章中的表格
+							</p>
+							<p class="right_introduce" style="margin-top: 10px;">若文章出处包含如下文字，则不收录该文章（不同词之间用全/半角逗号隔开）：</p>
+							<input type="text" class="right_word" />
+						</div>
+					</li>
+				</ul>
+				<div class="btn_box1">
+					<button class="tab_save">保存</button>
+					<button class="tab_cancle">取消</button>
+				</div>
+		    </div>
+		    <div class="my_tab" title="分类标准">
+				<p class="introduce">为该专题选择可用的分类标准。信息搜集过程中，系统将根据选用的分类标准，对收集到的记录进行自动分类。您可以根据需要，自定义多种分类标准。例如：按地区、产品、厂商和行业等标准进行分类，从而实现多维分类。</p>
+				<div class="selectbox clear">
+					<div class="select-bar">
+						<p>已选用的分类标准</p>
+					    <select multiple="multiple" id="select1">
+					        
+					    </select>
+					</div>
+					<div class="btn-bar">
+					    <p><span id="add"><input type="button" class="btn" value=">" title="移动选择项到右侧"></span></p>
+					    <p><span id="add_all"><input type="button" class="btn" value=">>" title="全部移到右侧"></span></p>
+					    <p><span id="remove"><input type="button" class="btn" value="<" title="移动选择项到左侧"></span></p>
+					    <p><span id="remove_all"><input type="button" class="btn" value="<<" title="全部移到左侧"></span></p>
+					</div>
+					<div class="select-bar">
+						<p>可选用的分类标准</p>
+					    <select multiple="multiple" id="select2">
+					    	<option value="分类标准1">分类标准1</option>
+					        <option value="分类标准2">分类标准2</option>
+					        <option value="分类标准3">分类标准3</option>
+					        <option value="分类标准4">分类标准4</option>
+					    </select>
+					</div>	
+				</div>
+				<div class="btn_box2">
+					<button class="tab_save">保存</button>
+					<button class="tab_cancle">取消</button>
+				</div>
+		    </div>
+		    <div class="my_tab" id="info_exextract" title="内容提取">
+				<p class="introduce">对于该专题下采集的记录，系统除了过滤出标题、时间、正文等关键信息外，还允许用户自定义要提取的其他信息单元，例如：浏览数、回复数、转发数、价格、型号等。</p>
+				<div class="extract_item hide">
+					<div class="extract_item_select">
+						<label>信息单元名称： <input type="text" class="extract_item_name" /></label>
+						<label>类型： <input type="text" class="extract_item_type" /></label>
+						<label>序号： <input type="text" class="extract_item_num" /></label>
+					</div>
+					<p style="line-height: 24px;font-size: 12px;">要提取的信息单元</p>
+					<textarea class="extract_item_count"></textarea>
+					<a href="javascript:void(0);" class="extract_item_remove easyui-linkbutton" iconCls="icon-cancel">删除</a>
+				</div>
+				<a href="javascript:void(0);" class="extract_add easyui-linkbutton" iconCls="icon-add">添加信息单元</a>
+				<div class="btn_box3">
+					<button class="tab_save">保存</button>
+					<button class="tab_cancle">取消</button>
+				</div>
+		    </div>
+		    <div class="my_tab" title="对象授权">
+				<p class="introduce">制定可访问该专题及其信息源设置的用户。若一个用户需要访问该专题或其包含的信息源，请将该用户加入到列表中。</p>
+				<div class="selectbox clear">
+					<div class="select-bar">
+						<p>可访问当前专题及其信息源的用户</p>
+					    <select multiple="multiple" id="select1_2">
+					        
+					    </select>
+					</div>
+					<div class="btn-bar">
+					    <p><span id="add2"><input type="button" class="btn" value=">" title="移动选择项到右侧"></span></p>
+					    <p><span id="add_all2"><input type="button" class="btn" value=">>" title="全部移到右侧"></span></p>
+					    <p><span id="remove2"><input type="button" class="btn" value="<" title="移动选择项到左侧"></span></p>
+					    <p><span id="remove_all2"><input type="button" class="btn" value="<<" title="全部移到左侧"></span></p>
+					</div>
+					<div class="select-bar">
+						<p>可选择的用户</p>
+					    <select multiple="multiple" id="select2_2">
+					    	<option value="用户1">用户1</option>
+					        <option value="用户2">用户2</option>
+					        <option value="用户3">用户3</option>
+					        <option value="用户4">用户4</option>
+					        <option value="用户5">用户5</option>
+					        <option value="用户6">用户6</option>
+					        <option value="用户7">用户7</option>
+					        <option value="用户8">用户8</option>
+					    </select>
+					</div>	
+				</div>
+				<div class="btn_box2">
+					<button class="tab_save">保存</button>
+					<button class="tab_cancle">取消</button>
+				</div>
+		    </div>
+		</section>
+		
+		<!--my js-->
+		<script src="../js/subDetail.js"></script>
+	</body>
+</html>
